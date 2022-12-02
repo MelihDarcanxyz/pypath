@@ -192,6 +192,69 @@
 <span class="n">go_annotations</span> <span class="o">=</span> <span class="n">go_annotations_goa</span>
 
 
+<div class="viewcode-block" id="go_annotations_all"><a class="viewcode-back" href="../../../_autosummary/pypath.inputs.go.go_annotations_all.html#pypath.inputs.go.go_annotations_all">[docs]</a><span class="k">def</span> <span class="nf">go_annotations_all</span><span class="p">(</span>
+    <span class="n">organism</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">,</span>
+    <span class="n">queried_fields</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+
+    <span class="n">organism</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">taxonomy</span><span class="o">.</span><span class="n">taxids</span><span class="p">[</span><span class="n">organism</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">organism</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span>
+        <span class="n">organism</span>
+    <span class="p">)</span>
+
+    <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;db&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;db_object_id&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;db_object_symbol&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;qualifier&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;go_id&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;reference&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;evidence_code&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;with_or_from&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;aspect&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;db_object_name&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;db_object_synonym&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;db_object_type&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;taxon_and_interacting_taxon&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;date&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;assigned_By&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;annotation_extension&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;gene_product_form_id&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">queried_fields</span> <span class="o">=</span> <span class="n">queried_fields</span> <span class="ow">or</span> <span class="n">fieldnames</span>
+    <span class="n">queried_fields</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">queried_fields</span><span class="p">)</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="n">urls</span><span class="o">.</span><span class="n">urls</span><span class="p">[</span><span class="s1">&#39;goa&#39;</span><span class="p">][</span><span class="s1">&#39;ebi_url&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="p">(</span><span class="n">organism</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">organism</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">curl</span><span class="o">.</span><span class="n">Curl</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">silent</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">large</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">result</span><span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">result</span><span class="p">:</span>
+
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">tmp_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="n">primary_key</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">fieldnames</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">&#39;db_object_id&#39;</span><span class="p">:</span>
+                <span class="n">primary_key</span> <span class="o">=</span> <span class="n">v</span>
+
+            <span class="k">elif</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">queried_fields</span><span class="p">:</span>
+                <span class="n">tmp_dict</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="k">if</span> <span class="n">v</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="kc">None</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">primary_key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_dict</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">primary_key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">tmp_dict</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
 <div class="viewcode-block" id="go_ancestors_goose"><a class="viewcode-back" href="../../../_autosummary/pypath.inputs.go.go_ancestors_goose.html#pypath.inputs.go.go_ancestors_goose">[docs]</a><span class="k">def</span> <span class="nf">go_ancestors_goose</span><span class="p">(</span><span class="n">aspects</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;P&#39;</span><span class="p">)):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Queries the ancestors of GO terms by AmiGO goose.</span>
