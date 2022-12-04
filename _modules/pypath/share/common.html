@@ -117,6 +117,16 @@
 <span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">past.builtins</span> <span class="kn">import</span> <span class="n">xrange</span><span class="p">,</span> <span class="nb">range</span><span class="p">,</span> <span class="n">reduce</span>
 
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">KeysView</span><span class="p">,</span>
+    <span class="n">Generator</span><span class="p">,</span>
+    <span class="n">ItemsView</span><span class="p">,</span>
+    <span class="n">ValuesView</span><span class="p">,</span>
+<span class="p">)</span>
+
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">re</span>
@@ -141,7 +151,7 @@
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;ROOT&#39;</span><span class="p">,</span>
     <span class="s1">&#39;aacodes&#39;</span><span class="p">,</span> <span class="s1">&#39;aaletters&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;simple_types&#39;</span><span class="p">,</span> <span class="s1">&#39;numeric_types&#39;</span><span class="p">,</span> <span class="s1">&#39;list_like&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;simple_types&#39;</span><span class="p">,</span> <span class="s1">&#39;numeric_types&#39;</span><span class="p">,</span> <span class="s1">&#39;list_like&#39;</span><span class="p">,</span> <span class="s1">&#39;LIST_LIKE&#39;</span><span class="p">,</span>
     <span class="s1">&#39;uniq_list&#39;</span><span class="p">,</span> <span class="s1">&#39;add_to_list&#39;</span><span class="p">,</span> <span class="s1">&#39;add_to_set&#39;</span><span class="p">,</span> <span class="s1">&#39;gen_session_id&#39;</span><span class="p">,</span>
     <span class="s1">&#39;sorensen_index&#39;</span><span class="p">,</span> <span class="s1">&#39;simpson_index&#39;</span><span class="p">,</span> <span class="s1">&#39;simpson_index_counts&#39;</span><span class="p">,</span>
     <span class="s1">&#39;jaccard_index&#39;</span><span class="p">,</span> <span class="s1">&#39;console&#39;</span><span class="p">,</span> <span class="s1">&#39;wcl&#39;</span><span class="p">,</span> <span class="s1">&#39;flat_list&#39;</span><span class="p">,</span> <span class="s1">&#39;char_types&#39;</span><span class="p">,</span>
@@ -170,6 +180,17 @@
 
 <span class="n">non_digit</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^\d.-]+&#39;</span><span class="p">)</span>
 
+<span class="n">LIST_LIKE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="nb">list</span><span class="p">,</span>
+    <span class="nb">set</span><span class="p">,</span>
+    <span class="nb">tuple</span><span class="p">,</span>
+    <span class="n">Generator</span><span class="p">,</span>
+    <span class="n">ItemsView</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">KeysView</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">ValuesView</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="n">default_name_type</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;protein&quot;</span><span class="p">:</span> <span class="s2">&quot;uniprot&quot;</span><span class="p">,</span>
                      <span class="s2">&quot;mirna&quot;</span><span class="p">:</span> <span class="s2">&quot;mirbase&quot;</span><span class="p">,</span>

@@ -22,7 +22,7 @@
     <script defer src="../_static/insipid-sidebar.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html" />
+    <link rel="next" title="pypath.inputs.kegg_api.disease_to_drug" href="pypath.inputs.kegg_api.disease_to_drug.html" />
     <link rel="prev" title="pypath.inputs.kegg.KeggPathway" href="pypath.inputs.kegg.KeggPathway.html" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -81,7 +81,7 @@
       <a href="pypath.inputs.kegg.KeggPathway.html" class="nav-icon previous" title="previous:&#13;pypath.inputs.kegg.KeggPathway" aria-label="Previous topic" accesskey="P" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
       </a>
-      <a href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html" class="nav-icon next" title="next:&#13;pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id" aria-label="Next topic" accesskey="N" tabindex="-1">
+      <a href="pypath.inputs.kegg_api.disease_to_drug.html" class="nav-icon next" title="next:&#13;pypath.inputs.kegg_api.disease_to_drug" aria-label="Next topic" accesskey="N" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
       </a>
     </nav>
@@ -98,11 +98,11 @@
           </span>
         </div>
       </a>
-      <a class="next" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html" aria-label="Next topic" >
+      <a class="next" href="pypath.inputs.kegg_api.disease_to_drug.html" aria-label="Next topic" >
         <div class="title">
           <span class="text">
             <span class="direction">next</span>
-            pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id
+            pypath.inputs.kegg_api.disease_to_drug
           </span>
         </div>
         <div class="icon">
@@ -125,62 +125,53 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html#pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id" title="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chebi_id_to_kegg_drug_id</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html#pypath.inputs.kegg_api.disease_to_drug" title="pypath.inputs.kegg_api.disease_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_drug</span></code></a>(organism)</p></td>
+<td><p>Disease-drug relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html#pypath.inputs.kegg_api.disease_to_drug" title="pypath.inputs.kegg_api.disease_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_drug</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html#pypath.inputs.kegg_api.disease_to_gene" title="pypath.inputs.kegg_api.disease_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_gene</span></code></a>(organism)</p></td>
+<td><p>Disease-gene relations from KEGG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html#pypath.inputs.kegg_api.disease_to_gene" title="pypath.inputs.kegg_api.disease_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_gene</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html#pypath.inputs.kegg_api.disease_to_pathway" title="pypath.inputs.kegg_api.disease_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_pathway</span></code></a>(organism)</p></td>
+<td><p>Disease-pathway relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html#pypath.inputs.kegg_api.disease_to_pathway" title="pypath.inputs.kegg_api.disease_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disease_to_pathway</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_disease.html#pypath.inputs.kegg_api.drug_to_disease" title="pypath.inputs.kegg_api.drug_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_disease</span></code></a>(organism)</p></td>
+<td><p>Drug-disease relations from KEGG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_disease.html#pypath.inputs.kegg_api.drug_to_disease" title="pypath.inputs.kegg_api.drug_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_disease</span></code></a>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_drug.html#pypath.inputs.kegg_api.drug_to_drug" title="pypath.inputs.kegg_api.drug_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_drug</span></code></a>([drugs, join, asynchronous])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_drug.html#pypath.inputs.kegg_api.drug_to_drug" title="pypath.inputs.kegg_api.drug_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_drug</span></code></a>([drugs, join, asynchronous])</p></td>
 <td><p>Downloads drug-drug interaction data from KEGG database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_gene.html#pypath.inputs.kegg_api.drug_to_gene" title="pypath.inputs.kegg_api.drug_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_gene</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_gene.html#pypath.inputs.kegg_api.drug_to_gene" title="pypath.inputs.kegg_api.drug_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_gene</span></code></a>(organism)</p></td>
+<td><p>Drug-gene relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_pathway.html#pypath.inputs.kegg_api.drug_to_pathway" title="pypath.inputs.kegg_api.drug_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_pathway</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_pathway.html#pypath.inputs.kegg_api.drug_to_pathway" title="pypath.inputs.kegg_api.drug_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drug_to_pathway</span></code></a>(organism)</p></td>
+<td><p>Drug-pathway relations from KEGG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html#pypath.inputs.kegg_api.gene_to_disease" title="pypath.inputs.kegg_api.gene_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_disease</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html#pypath.inputs.kegg_api.gene_to_disease" title="pypath.inputs.kegg_api.gene_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_disease</span></code></a>(organism)</p></td>
+<td><p>Gene-disease relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html#pypath.inputs.kegg_api.gene_to_drug" title="pypath.inputs.kegg_api.gene_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_drug</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html#pypath.inputs.kegg_api.gene_to_drug" title="pypath.inputs.kegg_api.gene_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_drug</span></code></a>(organism)</p></td>
+<td><p>Gene-drug relations from KEGG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html#pypath.inputs.kegg_api.gene_to_pathway" title="pypath.inputs.kegg_api.gene_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_pathway</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html#pypath.inputs.kegg_api.gene_to_pathway" title="pypath.inputs.kegg_api.gene_to_pathway"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gene_to_pathway</span></code></a>(organism)</p></td>
+<td><p>Gene-pathway relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id.html#pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id" title="pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_drug_id_to_chebi_id</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_to_chebi.html#pypath.inputs.kegg_api.kegg_drug_to_chebi" title="pypath.inputs.kegg_api.kegg_drug_to_chebi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_drug_to_chebi</span></code></a>(organism)</p></td>
+<td><p>Translation dict between KEGG drug IDs and ChEBI IDs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id.html#pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id" title="pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_gene_id_to_ncbi_gene_id</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html#pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid" title="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_gene_to_ncbi_geneid</span></code></a>(organism)</p></td>
+<td><p>Translation dict between KEGG gene IDs and NCBI Gene IDs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id.html#pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id" title="pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_gene_id_to_uniprot_id</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_uniprot.html#pypath.inputs.kegg_api.kegg_gene_to_uniprot" title="pypath.inputs.kegg_api.kegg_gene_to_uniprot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kegg_gene_to_uniprot</span></code></a>(organism)</p></td>
+<td><p>Translation dict between KEGG gene IDs and UniProt IDs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id.html#pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id" title="pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ncbi_gene_id_to_kegg_gene_id</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html#pypath.inputs.kegg_api.pathway_to_disease" title="pypath.inputs.kegg_api.pathway_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_disease</span></code></a>(organism)</p></td>
+<td><p>Pathway-disease relations from KEGG.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html#pypath.inputs.kegg_api.pathway_to_disease" title="pypath.inputs.kegg_api.pathway_to_disease"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_disease</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html#pypath.inputs.kegg_api.pathway_to_drug" title="pypath.inputs.kegg_api.pathway_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_drug</span></code></a>(organism)</p></td>
+<td><p>Pathway-drug relations from KEGG.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html#pypath.inputs.kegg_api.pathway_to_drug" title="pypath.inputs.kegg_api.pathway_to_drug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_drug</span></code></a>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html#pypath.inputs.kegg_api.pathway_to_gene" title="pypath.inputs.kegg_api.pathway_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_gene</span></code></a>(org)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id.html#pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id" title="pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uniprot_id_to_kegg_gene_id</span></code></a>(org)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html#pypath.inputs.kegg_api.pathway_to_gene" title="pypath.inputs.kegg_api.pathway_to_gene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pathway_to_gene</span></code></a>(organism)</p></td>
+<td><p>Pathway-gene relations from KEGG.</p></td>
 </tr>
 </tbody>
 </table>
@@ -271,7 +262,6 @@
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.ensembl.html">pypath.inputs.ensembl</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.exocarta.html">pypath.inputs.exocarta</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.genecards.html">pypath.inputs.genecards</a></li>
-<li class="toctree-l5"><a class="reference internal" href="pypath.inputs.go.html">pypath.inputs.go</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.gpcrdb.html">pypath.inputs.gpcrdb</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.graphviz.html">pypath.inputs.graphviz</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.guide2pharma.html">pypath.inputs.guide2pharma</a></li>
@@ -302,7 +292,6 @@
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kea.html">pypath.inputs.kea</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kegg.html">pypath.inputs.kegg</a></li>
 <li class="toctree-l5 current"><a class="current reference internal" href="#">pypath.inputs.kegg_api</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html">pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html">pypath.inputs.kegg_api.disease_to_drug</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html">pypath.inputs.kegg_api.disease_to_gene</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html">pypath.inputs.kegg_api.disease_to_pathway</a></li>
@@ -313,14 +302,12 @@
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html">pypath.inputs.kegg_api.gene_to_disease</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html">pypath.inputs.kegg_api.gene_to_drug</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html">pypath.inputs.kegg_api.gene_to_pathway</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id.html">pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id.html">pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id.html">pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id.html">pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_to_chebi.html">pypath.inputs.kegg_api.kegg_drug_to_chebi</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html">pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_uniprot.html">pypath.inputs.kegg_api.kegg_gene_to_uniprot</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html">pypath.inputs.kegg_api.pathway_to_disease</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html">pypath.inputs.kegg_api.pathway_to_drug</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html">pypath.inputs.kegg_api.pathway_to_gene</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id.html">pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kinasedotcom.html">pypath.inputs.kinasedotcom</a></li>
@@ -407,7 +394,6 @@
 <li class="toctree-l4"><a class="reference internal" href="pypath.internals.html">pypath.internals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.legacy.html">pypath.legacy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.obsolete.html">pypath.obsolete</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.omnipath.html">pypath.omnipath</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.resources.html">pypath.resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.share.html">pypath.share</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.utils.html">pypath.utils</a></li>
@@ -486,7 +472,6 @@
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.ensembl.html">pypath.inputs.ensembl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.exocarta.html">pypath.inputs.exocarta</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.genecards.html">pypath.inputs.genecards</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypath.inputs.go.html">pypath.inputs.go</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.gpcrdb.html">pypath.inputs.gpcrdb</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.graphviz.html">pypath.inputs.graphviz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.guide2pharma.html">pypath.inputs.guide2pharma</a></li>
@@ -517,7 +502,6 @@
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kea.html">pypath.inputs.kea</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kegg.html">pypath.inputs.kegg</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pypath.inputs.kegg_api</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html">pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html">pypath.inputs.kegg_api.disease_to_drug</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html">pypath.inputs.kegg_api.disease_to_gene</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html">pypath.inputs.kegg_api.disease_to_pathway</a></li>
@@ -528,14 +512,12 @@
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html">pypath.inputs.kegg_api.gene_to_disease</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html">pypath.inputs.kegg_api.gene_to_drug</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html">pypath.inputs.kegg_api.gene_to_pathway</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id.html">pypath.inputs.kegg_api.kegg_drug_id_to_chebi_id</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id.html">pypath.inputs.kegg_api.kegg_gene_id_to_ncbi_gene_id</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id.html">pypath.inputs.kegg_api.kegg_gene_id_to_uniprot_id</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id.html">pypath.inputs.kegg_api.ncbi_gene_id_to_kegg_gene_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_to_chebi.html">pypath.inputs.kegg_api.kegg_drug_to_chebi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html">pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_uniprot.html">pypath.inputs.kegg_api.kegg_gene_to_uniprot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html">pypath.inputs.kegg_api.pathway_to_disease</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html">pypath.inputs.kegg_api.pathway_to_drug</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html">pypath.inputs.kegg_api.pathway_to_gene</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id.html">pypath.inputs.kegg_api.uniprot_id_to_kegg_gene_id</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kinasedotcom.html">pypath.inputs.kinasedotcom</a></li>
@@ -622,7 +604,6 @@
 <li class="toctree-l2"><a class="reference internal" href="pypath.internals.html">pypath.internals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.legacy.html">pypath.legacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.obsolete.html">pypath.obsolete</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pypath.omnipath.html">pypath.omnipath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.resources.html">pypath.resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.share.html">pypath.share</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.utils.html">pypath.utils</a></li>
@@ -660,11 +641,11 @@
           </span>
         </div>
       </a>
-      <a class="next" href="pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id.html" aria-label="Next topic" >
+      <a class="next" href="pypath.inputs.kegg_api.disease_to_drug.html" aria-label="Next topic" >
         <div class="title">
           <span class="text">
             <span class="direction">next</span>
-            pypath.inputs.kegg_api.chebi_id_to_kegg_drug_id
+            pypath.inputs.kegg_api.disease_to_drug
           </span>
         </div>
         <div class="icon">

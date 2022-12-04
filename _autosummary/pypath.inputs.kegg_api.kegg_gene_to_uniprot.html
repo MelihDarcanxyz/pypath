@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pypath.inputs.go.go_ancestors &#8212; pypath 0.14.30 documentation</title>
+    <title>pypath.inputs.kegg_api.kegg_gene_to_uniprot &#8212; pypath 0.14.30 documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/insipid.css" />
@@ -22,8 +22,8 @@
     <script defer src="../_static/insipid-sidebar.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pypath.inputs.go.go_ancestors_goose" href="pypath.inputs.go.go_ancestors_goose.html" />
-    <link rel="prev" title="pypath.inputs.go.get_goslim" href="pypath.inputs.go.get_goslim.html" />
+    <link rel="next" title="pypath.inputs.kegg_api.pathway_to_disease" href="pypath.inputs.kegg_api.pathway_to_disease.html" />
+    <link rel="prev" title="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html" />
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
   </head><body>
@@ -61,8 +61,8 @@
             </label>
           </div>
           <div class="title">
-            <a class="parent" href="pypath.inputs.go.html" accesskey="U">pypath.inputs.go</a>
-            <a class="top" href="#">pypath.inputs.go.go_ancestors</a>
+            <a class="parent" href="pypath.inputs.kegg_api.html" accesskey="U">pypath.inputs.kegg_api</a>
+            <a class="top" href="#">pypath.inputs.kegg_api.kegg_gene_to_uniprot</a>
           </div>
           <div class="buttons">
             <button id="fullscreen-button" type="button" aria-hidden="true">
@@ -78,31 +78,31 @@
       </div>
     </header>
     <nav>
-      <a href="pypath.inputs.go.get_goslim.html" class="nav-icon previous" title="previous:&#13;pypath.inputs.go.get_goslim" aria-label="Previous topic" accesskey="P" tabindex="-1">
+      <a href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html" class="nav-icon previous" title="previous:&#13;pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid" aria-label="Previous topic" accesskey="P" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
       </a>
-      <a href="pypath.inputs.go.go_ancestors_goose.html" class="nav-icon next" title="next:&#13;pypath.inputs.go.go_ancestors_goose" aria-label="Next topic" accesskey="N" tabindex="-1">
+      <a href="pypath.inputs.kegg_api.pathway_to_disease.html" class="nav-icon next" title="next:&#13;pypath.inputs.kegg_api.pathway_to_disease" aria-label="Next topic" accesskey="N" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
       </a>
     </nav>
 
     <nav class="relbar">
-      <a class="previous" href="pypath.inputs.go.get_goslim.html" aria-label="Previous topic" >
+      <a class="previous" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html" aria-label="Previous topic" >
         <div class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
         </div>
         <div class="title">
           <span class="text">
             <span class="direction">previous</span>
-            pypath.inputs.go.get_goslim
+            pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid
           </span>
         </div>
       </a>
-      <a class="next" href="pypath.inputs.go.go_ancestors_goose.html" aria-label="Next topic" >
+      <a class="next" href="pypath.inputs.kegg_api.pathway_to_disease.html" aria-label="Next topic" >
         <div class="title">
           <span class="text">
             <span class="direction">next</span>
-            pypath.inputs.go.go_ancestors_goose
+            pypath.inputs.kegg_api.pathway_to_disease
           </span>
         </div>
         <div class="icon">
@@ -116,18 +116,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-<section id="pypath-inputs-go-go-ancestors">
-<h1>pypath.inputs.go.go_ancestors<a class="headerlink" href="#pypath-inputs-go-go-ancestors" title="Permalink to this heading">§</a></h1>
+<section id="pypath-inputs-kegg-api-kegg-gene-to-uniprot">
+<h1>pypath.inputs.kegg_api.kegg_gene_to_uniprot<a class="headerlink" href="#pypath-inputs-kegg-api-kegg-gene-to-uniprot" title="Permalink to this heading">§</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pypath.inputs.go.go_ancestors">
-<span class="sig-prename descclassname"><span class="pre">pypath.inputs.go.</span></span><span class="sig-name descname"><span class="pre">go_ancestors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aspects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('C',</span> <span class="pre">'F',</span> <span class="pre">'P')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pypath.inputs.go.go_ancestors" title="Permalink to this definition">§</a></dt>
-<dd><p>Queries the ancestors of GO terms by QuickGO REST API.</p>
-<p>Returns dict of sets where keys are GO accessions and values are sets
-of their ancestors.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>aspects</strong> (<em>tuple</em>) – GO aspects: <cite>C</cite>, <cite>F</cite> and <cite>P</cite> for cellular_component,
-molecular_function and biological_process, respectively.</p>
+<dt class="sig sig-object py" id="pypath.inputs.kegg_api.kegg_gene_to_uniprot">
+<span class="sig-prename descclassname"><span class="pre">pypath.inputs.kegg_api.</span></span><span class="sig-name descname"><span class="pre">kegg_gene_to_uniprot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organism</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pypath.inputs.kegg_api.kegg_gene_to_uniprot" title="Permalink to this definition">§</a></dt>
+<dd><p>Translation dict between KEGG gene IDs and UniProt IDs.</p>
+<dl class="simple">
+<dt>Args</dt><dd><dl class="simple">
+<dt>organism:</dt><dd><p>Name of the organism. Gene relations are organism specific.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -219,33 +218,6 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.ensembl.html">pypath.inputs.ensembl</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.exocarta.html">pypath.inputs.exocarta</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.genecards.html">pypath.inputs.genecards</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="pypath.inputs.go.html">pypath.inputs.go</a><ul class="current">
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.get_go_desc.html">pypath.inputs.go.get_go_desc</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.get_go_quick.html">pypath.inputs.go.get_go_quick</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.get_goslim.html">pypath.inputs.go.get_goslim</a></li>
-<li class="toctree-l6 current"><a class="current reference internal" href="#">pypath.inputs.go.go_ancestors</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="#pypath.inputs.go.go_ancestors"><code class="docutils literal notranslate"><span class="pre">go_ancestors()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_ancestors_goose.html">pypath.inputs.go.go_ancestors_goose</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_ancestors_quickgo.html">pypath.inputs.go.go_ancestors_quickgo</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations.html">pypath.inputs.go.go_annotations</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_all.html">pypath.inputs.go.go_annotations_all</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_goa.html">pypath.inputs.go.go_annotations_goa</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_goose.html">pypath.inputs.go.go_annotations_goose</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_quickgo.html">pypath.inputs.go.go_annotations_quickgo</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_solr.html">pypath.inputs.go.go_annotations_solr</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_annotations_uniprot.html">pypath.inputs.go.go_annotations_uniprot</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_descendants.html">pypath.inputs.go.go_descendants</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_descendants_goose.html">pypath.inputs.go.go_descendants_goose</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_descendants_quickgo.html">pypath.inputs.go.go_descendants_quickgo</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_descendants_to_ancestors.html">pypath.inputs.go.go_descendants_to_ancestors</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_terms.html">pypath.inputs.go.go_terms</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_terms_goose.html">pypath.inputs.go.go_terms_goose</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_terms_quickgo.html">pypath.inputs.go.go_terms_quickgo</a></li>
-<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.go.go_terms_solr.html">pypath.inputs.go.go_terms_solr</a></li>
-</ul>
-</li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.gpcrdb.html">pypath.inputs.gpcrdb</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.graphviz.html">pypath.inputs.graphviz</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.guide2pharma.html">pypath.inputs.guide2pharma</a></li>
@@ -275,7 +247,28 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.italk.html">pypath.inputs.italk</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kea.html">pypath.inputs.kea</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kegg.html">pypath.inputs.kegg</a></li>
-<li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kegg_api.html">pypath.inputs.kegg_api</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="pypath.inputs.kegg_api.html">pypath.inputs.kegg_api</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html">pypath.inputs.kegg_api.disease_to_drug</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html">pypath.inputs.kegg_api.disease_to_gene</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html">pypath.inputs.kegg_api.disease_to_pathway</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_disease.html">pypath.inputs.kegg_api.drug_to_disease</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_drug.html">pypath.inputs.kegg_api.drug_to_drug</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_gene.html">pypath.inputs.kegg_api.drug_to_gene</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_pathway.html">pypath.inputs.kegg_api.drug_to_pathway</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html">pypath.inputs.kegg_api.gene_to_disease</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html">pypath.inputs.kegg_api.gene_to_drug</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html">pypath.inputs.kegg_api.gene_to_pathway</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_to_chebi.html">pypath.inputs.kegg_api.kegg_drug_to_chebi</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html">pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">pypath.inputs.kegg_api.kegg_gene_to_uniprot</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#pypath.inputs.kegg_api.kegg_gene_to_uniprot"><code class="docutils literal notranslate"><span class="pre">kegg_gene_to_uniprot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html">pypath.inputs.kegg_api.pathway_to_disease</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html">pypath.inputs.kegg_api.pathway_to_drug</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html">pypath.inputs.kegg_api.pathway_to_gene</a></li>
+</ul>
+</li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kinasedotcom.html">pypath.inputs.kinasedotcom</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.kirouac2010.html">pypath.inputs.kirouac2010</a></li>
 <li class="toctree-l5"><a class="reference internal" href="pypath.inputs.lambert2018.html">pypath.inputs.lambert2018</a></li>
@@ -360,7 +353,6 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l4"><a class="reference internal" href="pypath.internals.html">pypath.internals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.legacy.html">pypath.legacy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.obsolete.html">pypath.obsolete</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.omnipath.html">pypath.omnipath</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.resources.html">pypath.resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.share.html">pypath.share</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pypath.utils.html">pypath.utils</a></li>
@@ -439,33 +431,6 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.ensembl.html">pypath.inputs.ensembl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.exocarta.html">pypath.inputs.exocarta</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.genecards.html">pypath.inputs.genecards</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="pypath.inputs.go.html">pypath.inputs.go</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.get_go_desc.html">pypath.inputs.go.get_go_desc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.get_go_quick.html">pypath.inputs.go.get_go_quick</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.get_goslim.html">pypath.inputs.go.get_goslim</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pypath.inputs.go.go_ancestors</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#pypath.inputs.go.go_ancestors"><code class="docutils literal notranslate"><span class="pre">go_ancestors()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_ancestors_goose.html">pypath.inputs.go.go_ancestors_goose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_ancestors_quickgo.html">pypath.inputs.go.go_ancestors_quickgo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations.html">pypath.inputs.go.go_annotations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_all.html">pypath.inputs.go.go_annotations_all</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_goa.html">pypath.inputs.go.go_annotations_goa</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_goose.html">pypath.inputs.go.go_annotations_goose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_quickgo.html">pypath.inputs.go.go_annotations_quickgo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_solr.html">pypath.inputs.go.go_annotations_solr</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_annotations_uniprot.html">pypath.inputs.go.go_annotations_uniprot</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_descendants.html">pypath.inputs.go.go_descendants</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_descendants_goose.html">pypath.inputs.go.go_descendants_goose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_descendants_quickgo.html">pypath.inputs.go.go_descendants_quickgo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_descendants_to_ancestors.html">pypath.inputs.go.go_descendants_to_ancestors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_terms.html">pypath.inputs.go.go_terms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_terms_goose.html">pypath.inputs.go.go_terms_goose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_terms_quickgo.html">pypath.inputs.go.go_terms_quickgo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.go.go_terms_solr.html">pypath.inputs.go.go_terms_solr</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.gpcrdb.html">pypath.inputs.gpcrdb</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.graphviz.html">pypath.inputs.graphviz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.guide2pharma.html">pypath.inputs.guide2pharma</a></li>
@@ -495,7 +460,28 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.italk.html">pypath.inputs.italk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kea.html">pypath.inputs.kea</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kegg.html">pypath.inputs.kegg</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kegg_api.html">pypath.inputs.kegg_api</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="pypath.inputs.kegg_api.html">pypath.inputs.kegg_api</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_drug.html">pypath.inputs.kegg_api.disease_to_drug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_gene.html">pypath.inputs.kegg_api.disease_to_gene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.disease_to_pathway.html">pypath.inputs.kegg_api.disease_to_pathway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_disease.html">pypath.inputs.kegg_api.drug_to_disease</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_drug.html">pypath.inputs.kegg_api.drug_to_drug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_gene.html">pypath.inputs.kegg_api.drug_to_gene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.drug_to_pathway.html">pypath.inputs.kegg_api.drug_to_pathway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_disease.html">pypath.inputs.kegg_api.gene_to_disease</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_drug.html">pypath.inputs.kegg_api.gene_to_drug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.gene_to_pathway.html">pypath.inputs.kegg_api.gene_to_pathway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_drug_to_chebi.html">pypath.inputs.kegg_api.kegg_drug_to_chebi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html">pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pypath.inputs.kegg_api.kegg_gene_to_uniprot</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#pypath.inputs.kegg_api.kegg_gene_to_uniprot"><code class="docutils literal notranslate"><span class="pre">kegg_gene_to_uniprot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_disease.html">pypath.inputs.kegg_api.pathway_to_disease</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_drug.html">pypath.inputs.kegg_api.pathway_to_drug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pypath.inputs.kegg_api.pathway_to_gene.html">pypath.inputs.kegg_api.pathway_to_gene</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kinasedotcom.html">pypath.inputs.kinasedotcom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.kirouac2010.html">pypath.inputs.kirouac2010</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypath.inputs.lambert2018.html">pypath.inputs.lambert2018</a></li>
@@ -580,7 +566,6 @@ molecular_function and biological_process, respectively.</p>
 <li class="toctree-l2"><a class="reference internal" href="pypath.internals.html">pypath.internals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.legacy.html">pypath.legacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.obsolete.html">pypath.obsolete</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pypath.omnipath.html">pypath.omnipath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.resources.html">pypath.resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.share.html">pypath.share</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pypath.utils.html">pypath.utils</a></li>
@@ -607,22 +592,22 @@ molecular_function and biological_process, respectively.</p>
     </div>
 
     <nav class="relbar">
-      <a class="previous" href="pypath.inputs.go.get_goslim.html" aria-label="Previous topic" >
+      <a class="previous" href="pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid.html" aria-label="Previous topic" >
         <div class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"/></svg>
         </div>
         <div class="title">
           <span class="text">
             <span class="direction">previous</span>
-            pypath.inputs.go.get_goslim
+            pypath.inputs.kegg_api.kegg_gene_to_ncbi_geneid
           </span>
         </div>
       </a>
-      <a class="next" href="pypath.inputs.go.go_ancestors_goose.html" aria-label="Next topic" >
+      <a class="next" href="pypath.inputs.kegg_api.pathway_to_disease.html" aria-label="Next topic" >
         <div class="title">
           <span class="text">
             <span class="direction">next</span>
-            pypath.inputs.go.go_ancestors_goose
+            pypath.inputs.kegg_api.pathway_to_disease
           </span>
         </div>
         <div class="icon">
