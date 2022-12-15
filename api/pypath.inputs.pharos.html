@@ -47,7 +47,7 @@
     <link rel="shortcut icon" href="../_static/omnipath-logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pypath.inputs.pharos.getDiseases" href="pypath.inputs.pharos.getDiseases.html" />
+    <link rel="next" title="pypath.inputs.pharos.pharos_diseases" href="pypath.inputs.pharos.pharos_diseases.html" />
     <link rel="prev" title="pypath.inputs.pfam.pfam_uniprot" href="pypath.inputs.pfam.pfam_uniprot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -427,6 +427,7 @@
               
   <section id="module-pypath.inputs.pharos">
 <span id="pypath-inputs-pharos"></span><h1>pypath.inputs.pharos<a class="headerlink" href="#module-pypath.inputs.pharos" title="Permalink to this heading">§</a></h1>
+<p>Retrieve data from the NIH Pharos database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">members<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -434,29 +435,34 @@
 <p class="rubric">Functions</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.getDiseases.html#pypath.inputs.pharos.getDiseases" title="pypath.inputs.pharos.getDiseases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDiseases</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_diseases.html#pypath.inputs.pharos.pharos_diseases" title="pypath.inputs.pharos.pharos_diseases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_diseases</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>diseases</cite> records from Pharos.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.getExpressions.html#pypath.inputs.pharos.getExpressions" title="pypath.inputs.pharos.getExpressions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExpressions</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_expression.html#pypath.inputs.pharos.pharos_expression" title="pypath.inputs.pharos.pharos_expression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_expression</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>expression</cite> records from Pharos.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.getGtex.html#pypath.inputs.pharos.getGtex" title="pypath.inputs.pharos.getGtex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGtex</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_general.html#pypath.inputs.pharos.pharos_general" title="pypath.inputs.pharos.pharos_general"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_general</span></code></a>(query[, variables])</p></td>
+<td><p>Query the NIH Pharos database by GraphQL.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.getLigands.html#pypath.inputs.pharos.getLigands" title="pypath.inputs.pharos.getLigands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLigands</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_gtex.html#pypath.inputs.pharos.pharos_gtex" title="pypath.inputs.pharos.pharos_gtex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_gtex</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>gtex</cite> records from Pharos.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.getOrthologs.html#pypath.inputs.pharos.getOrthologs" title="pypath.inputs.pharos.getOrthologs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOrthologs</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_ligands.html#pypath.inputs.pharos.pharos_ligands" title="pypath.inputs.pharos.pharos_ligands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_ligands</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>ligands</cite> records from Pharos.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.getXrefs.html#pypath.inputs.pharos.getXrefs" title="pypath.inputs.pharos.getXrefs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getXrefs</span></code></a>([chunk_size])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_orthologs.html#pypath.inputs.pharos.pharos_orthologs" title="pypath.inputs.pharos.pharos_orthologs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_orthologs</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>orthologs</cite> records from Pharos.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.get_targets.html#pypath.inputs.pharos.get_targets" title="pypath.inputs.pharos.get_targets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_targets</span></code></a>([chunk_size, getExpressions, ...])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_targets.html#pypath.inputs.pharos.pharos_targets" title="pypath.inputs.pharos.pharos_targets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_targets</span></code></a>([chunk_size, expression, ...])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param chunk_size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Records in one batch. Better stay 100 because higher numbers</p>
+</dd>
+</dl>
+</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_general.html#pypath.inputs.pharos.pharos_general" title="pypath.inputs.pharos.pharos_general"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_general</span></code></a>(query[, variables])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.inputs.pharos.pharos_xrefs.html#pypath.inputs.pharos.pharos_xrefs" title="pypath.inputs.pharos.pharos_xrefs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pharos_xrefs</span></code></a>([chunk_size])</p></td>
+<td><p>Retrieve <cite>xrefs</cite> records from Pharos.</p></td>
 </tr>
 </tbody>
 </table>
@@ -477,10 +483,10 @@
           <p class="prev-next-title">pypath.inputs.pfam.pfam_uniprot</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="pypath.inputs.pharos.getDiseases.html" title="next page">
+  <a class='right-next' id="next-link" href="pypath.inputs.pharos.pharos_diseases.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">pypath.inputs.pharos.getDiseases</p>
+      <p class="prev-next-title">pypath.inputs.pharos.pharos_diseases</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>

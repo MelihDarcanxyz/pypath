@@ -47,8 +47,8 @@
     <link rel="shortcut icon" href="../_static/omnipath-logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pypath.inputs.phobius" href="pypath.inputs.phobius.html" />
-    <link rel="prev" title="pypath.inputs.pharos.get_targets" href="pypath.inputs.pharos.get_targets.html" />
+    <link rel="next" title="pypath.inputs.pharos.pharos_gtex" href="pypath.inputs.pharos.pharos_gtex.html" />
+    <link rel="prev" title="pypath.inputs.pharos.pharos_expression" href="pypath.inputs.pharos.pharos_expression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -429,8 +429,21 @@
 <h1>pypath.inputs.pharos.pharos_general<a class="headerlink" href="#pypath-inputs-pharos-pharos-general" title="Permalink to this heading">§</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="pypath.inputs.pharos.pharos_general">
-<span class="sig-prename descclassname"><span class="pre">pypath.inputs.pharos.</span></span><span class="sig-name descname"><span class="pre">pharos_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pypath/inputs/pharos.html#pharos_general"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.inputs.pharos.pharos_general" title="Permalink to this definition">§</a></dt>
-<dd></dd></dl>
+<span class="sig-prename descclassname"><span class="pre">pypath.inputs.pharos.</span></span><span class="sig-name descname"><span class="pre">pharos_general</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="../_modules/pypath/inputs/pharos.html#pharos_general"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.inputs.pharos.pharos_general" title="Permalink to this definition">§</a></dt>
+<dd><p>Query the NIH Pharos database by GraphQL.</p>
+<p>Read about Pharos here: <a class="reference external" href="https://pharos.nih.gov/about">https://pharos.nih.gov/about</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – A GraphQL query.</p></li>
+<li><p><strong>variables</strong> – Variables to retrieve. A dict of variable names and boolean values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON response parsed into a dict.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 
@@ -442,17 +455,17 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="pypath.inputs.pharos.get_targets.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="pypath.inputs.pharos.pharos_expression.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">pypath.inputs.pharos.get_targets</p>
+          <p class="prev-next-title">pypath.inputs.pharos.pharos_expression</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="pypath.inputs.phobius.html" title="next page">
+  <a class='right-next' id="next-link" href="pypath.inputs.pharos.pharos_gtex.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">pypath.inputs.phobius</p>
+      <p class="prev-next-title">pypath.inputs.pharos.pharos_gtex</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
