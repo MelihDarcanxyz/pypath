@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pypath.inputs.trip.trip_process_table &#8212; pypath 0.14.34 documentation</title>
+    <title>pypath.inputs.trrust.trrust_mouse &#8212; pypath 0.14.34 documentation</title>
   
   
   
@@ -43,12 +43,12 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/pypath.inputs.trip.trip_process_table';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/pypath.inputs.trrust.trrust_mouse';</script>
     <link rel="shortcut icon" href="../_static/omnipath-logo.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="pypath.inputs.trrust" href="pypath.inputs.trrust.html" />
-    <link rel="prev" title="pypath.inputs.trip.trip_process" href="pypath.inputs.trip.trip_process.html" />
+    <link rel="next" title="pypath.inputs.trrust.trrust_scraping" href="pypath.inputs.trrust.trrust_scraping.html" />
+    <link rel="prev" title="pypath.inputs.trrust.trrust_human" href="pypath.inputs.trrust.trrust_human.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -425,25 +425,12 @@
             
             <article class="bd-article" role="main">
               
-  <section id="pypath-inputs-trip-trip-process-table">
-<h1>pypath.inputs.trip.trip_process_table<a class="headerlink" href="#pypath-inputs-trip-trip-process-table" title="Permalink to this heading">§</a></h1>
+  <section id="pypath-inputs-trrust-trrust-mouse">
+<h1>pypath.inputs.trrust.trrust_mouse<a class="headerlink" href="#pypath-inputs-trrust-trrust-mouse" title="Permalink to this heading">§</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pypath.inputs.trip.trip_process_table">
-<span class="sig-prename descclassname"><span class="pre">pypath.inputs.trip.</span></span><span class="sig-name descname"><span class="pre">trip_process_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tab</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trp_uniprot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pypath/inputs/trip.html#trip_process_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.inputs.trip.trip_process_table" title="Permalink to this definition">§</a></dt>
-<dd><p>Processes one HTML table downloaded from TRIP webpage.</p>
-<dl class="simple">
-<dt>&#64;tab<span class="classifier">bs4.element.Tag()</span></dt><dd><p>One table of interactions from TRIP webpage.</p>
-</dd>
-<dt>&#64;result<span class="classifier">dict</span></dt><dd><p>Dictionary the data should be filled in.</p>
-</dd>
-<dt>&#64;intrs<span class="classifier">dict</span></dt><dd><p>Dictionary of already converted interactor IDs.
-This serves as a cache so do not need to look up
-the same ID twice.</p>
-</dd>
-<dt>&#64;trp_uniprot<span class="classifier">str</span></dt><dd><p>UniProt ID of TRP domain containing protein.</p>
-</dd>
-</dl>
-</dd></dl>
+<dt class="sig sig-object py" id="pypath.inputs.trrust.trrust_mouse">
+<span class="sig-prename descclassname"><span class="pre">pypath.inputs.trrust.</span></span><span class="sig-name descname"><span class="pre">trrust_mouse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pypath/inputs/trrust.html#trrust_mouse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.inputs.trrust.trrust_mouse" title="Permalink to this definition">§</a></dt>
+<dd></dd></dl>
 
 </section>
 
@@ -455,17 +442,17 @@ the same ID twice.</p>
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="pypath.inputs.trip.trip_process.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="pypath.inputs.trrust.trrust_human.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">pypath.inputs.trip.trip_process</p>
+          <p class="prev-next-title">pypath.inputs.trrust.trrust_human</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="pypath.inputs.trrust.html" title="next page">
+  <a class='right-next' id="next-link" href="pypath.inputs.trrust.trrust_scraping.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">pypath.inputs.trrust</p>
+      <p class="prev-next-title">pypath.inputs.trrust.trrust_scraping</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
