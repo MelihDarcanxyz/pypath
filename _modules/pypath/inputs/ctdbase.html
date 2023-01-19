@@ -526,6 +526,9 @@
 
             <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
 
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fieldnames</span><span class="p">):</span>
+            <span class="k">continue</span> <span class="c1"># some lines have missing fields and cannot be parsed</span>
+
         <span class="n">entry</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">fieldname</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">fieldnames</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
