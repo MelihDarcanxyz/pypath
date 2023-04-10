@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; pypath 0.14.38 documentation</title>
+    <title>Index &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -751,6 +751,8 @@ document.write(`
 </li>
         <li><a href="api/pypath.inputs.drugbank.DrugbankFull.html#pypath.inputs.drugbank.DrugbankFull.__init__">(pypath.inputs.drugbank.DrugbankFull method)</a>
 </li>
+        <li><a href="api/pypath.inputs.hmdb.Field.html#pypath.inputs.hmdb.Field.__init__">(pypath.inputs.hmdb.Field method)</a>
+</li>
         <li><a href="api/pypath.inputs.hpmr.HpmrInteraction.html#pypath.inputs.hpmr.HpmrInteraction.__init__">(pypath.inputs.hpmr.HpmrInteraction method)</a>
 </li>
         <li><a href="api/pypath.inputs.icellnet.IcellnetRecord.html#pypath.inputs.icellnet.IcellnetRecord.__init__">(pypath.inputs.icellnet.IcellnetRecord method)</a>
@@ -786,6 +788,8 @@ document.write(`
         <li><a href="api/pypath.internals.input_formats.BiomartMapping.html#pypath.internals.input_formats.BiomartMapping.__init__">(pypath.internals.input_formats.BiomartMapping method)</a>
 </li>
         <li><a href="api/pypath.internals.input_formats.FileMapping.html#pypath.internals.input_formats.FileMapping.__init__">(pypath.internals.input_formats.FileMapping method)</a>
+</li>
+        <li><a href="api/pypath.internals.input_formats.HmdbMapping.html#pypath.internals.input_formats.HmdbMapping.__init__">(pypath.internals.input_formats.HmdbMapping method)</a>
 </li>
         <li><a href="api/pypath.internals.input_formats.MappingInput.html#pypath.internals.input_formats.MappingInput.__init__">(pypath.internals.input_formats.MappingInput method)</a>
 </li>
@@ -3108,6 +3112,12 @@ document.write(`
 </li>
       <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.collect_small_molecules">collect_small_molecules (pypath.core.network.Network attribute)</a>
 </li>
+      <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.collectri">collectri() (pypath.core.network.Network class method)</a>
+</li>
+      <li><a href="api/pypath.inputs.collectri.collectri_interactions.html#pypath.inputs.collectri.collectri_interactions">collectri_interactions() (in module pypath.inputs.collectri)</a>
+</li>
+      <li><a href="api/pypath.inputs.collectri.collectri_raw.html#pypath.inputs.collectri.collectri_raw">collectri_raw() (in module pypath.inputs.collectri)</a>
+</li>
       <li><a href="api/pypath.legacy.main.PyPath.html#pypath.legacy.main.PyPath.combine_attr">combine_attr() (pypath.legacy.main.PyPath method)</a>
 </li>
       <li><a href="api/pypath.share.common.combine_attrs.html#pypath.share.common.combine_attrs">combine_attrs() (in module pypath.share.common)</a>
@@ -3830,10 +3840,10 @@ document.write(`
 </li>
       <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.count_degrees_signed_out_by_interaction_type_and_data_model_and_resource">count_degrees_signed_out_by_interaction_type_and_data_model_and_resource (pypath.core.network.Network attribute)</a>
 </li>
-      <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.count_degrees_signed_out_by_reference">count_degrees_signed_out_by_reference (pypath.core.network.Network attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.count_degrees_signed_out_by_reference">count_degrees_signed_out_by_reference (pypath.core.network.Network attribute)</a>
+</li>
       <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.count_degrees_signed_out_by_resource">count_degrees_signed_out_by_resource (pypath.core.network.Network attribute)</a>
 </li>
       <li><a href="api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_degrees_undirected">count_degrees_undirected (pypath.core.interaction.Interaction attribute)</a>
@@ -5984,6 +5994,8 @@ document.write(`
 </li>
       <li><a href="api/pypath.utils.uniprot.features_table.html#pypath.utils.uniprot.features_table">features_table() (in module pypath.utils.uniprot)</a>
 </li>
+      <li><a href="api/pypath.inputs.hmdb.Field.html#pypath.inputs.hmdb.Field">Field (class in pypath.inputs.hmdb)</a>
+</li>
       <li><a href="api/pypath.internals.input_formats.FileMapping.html#pypath.internals.input_formats.FileMapping">FileMapping (class in pypath.internals.input_formats)</a>
 </li>
       <li><a href="api/pypath.share.curl.FileOpener.html#pypath.share.curl.FileOpener">FileOpener (class in pypath.share.curl)</a>
@@ -7812,18 +7824,30 @@ document.write(`
 </li>
       <li><a href="api/pypath.visual.plot.HistoryTree.html#pypath.visual.plot.HistoryTree">HistoryTree (class in pypath.visual.plot)</a>
 </li>
+      <li><a href="api/pypath.inputs.hmdb.hmdb_iter_metabolites.html#pypath.inputs.hmdb.hmdb_iter_metabolites">hmdb_iter_metabolites() (in module pypath.inputs.hmdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.hmdb.hmdb_mapping.html#pypath.inputs.hmdb.hmdb_mapping">hmdb_mapping() (in module pypath.inputs.hmdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.hmdb.hmdb_metabolites_raw.html#pypath.inputs.hmdb.hmdb_metabolites_raw">hmdb_metabolites_raw() (in module pypath.inputs.hmdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.hmdb.hmdb_table.html#pypath.inputs.hmdb.hmdb_table">hmdb_table() (in module pypath.inputs.hmdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.hmdb.hmdb_xml.html#pypath.inputs.hmdb.hmdb_xml">hmdb_xml() (in module pypath.inputs.hmdb)</a>
+</li>
+      <li><a href="api/pypath.internals.input_formats.HmdbMapping.html#pypath.internals.input_formats.HmdbMapping">HmdbMapping (class in pypath.internals.input_formats)</a>
+</li>
       <li><a href="api/pypath.inputs.homologene.homologene_dict.html#pypath.inputs.homologene.homologene_dict">homologene_dict() (in module pypath.inputs.homologene)</a>
 </li>
       <li><a href="api/pypath.inputs.homologene.homologene_uniprot_dict.html#pypath.inputs.homologene.homologene_uniprot_dict">homologene_uniprot_dict() (in module pypath.inputs.homologene)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/pypath.legacy.main.PyPath.html#pypath.legacy.main.PyPath.homology_translation">homology_translation() (pypath.legacy.main.PyPath method)</a>
 </li>
       <li><a href="api/pypath.utils.homology.HomologyManager.html#pypath.utils.homology.HomologyManager">HomologyManager (class in pypath.utils.homology)</a>
 </li>
       <li><a href="api/pypath.core.complex.Hpmr.html#pypath.core.complex.Hpmr">Hpmr (class in pypath.core.complex)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/pypath.inputs.hpmr.hpmr_annotations.html#pypath.inputs.hpmr.hpmr_annotations">hpmr_annotations() (in module pypath.inputs.hpmr)</a>
 </li>
       <li><a href="api/pypath.inputs.hpmr.hpmr_complexes.html#pypath.inputs.hpmr.hpmr_complexes">hpmr_complexes() (in module pypath.inputs.hpmr)</a>
@@ -7934,8 +7958,12 @@ document.write(`
       </ul></li>
       <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.id_type_side">id_type_side() (pypath.utils.mapping.MapReader method)</a>
 </li>
-      <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.id_types">id_types() (pypath.utils.mapping.Mapper class method)</a>
+      <li><a href="api/pypath.utils.mapping.id_types.html#pypath.utils.mapping.id_types">id_types() (in module pypath.utils.mapping)</a>
+
+      <ul>
+        <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.id_types">(pypath.utils.mapping.Mapper class method)</a>
 </li>
+      </ul></li>
       <li><a href="api/pypath.core.entity.EntityKey.html#pypath.core.entity.EntityKey.identifier">identifier (pypath.core.entity.EntityKey attribute)</a>
 </li>
       <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.identifier">identifier() (pypath.utils.mapping.Mapper method)</a>
@@ -7965,6 +7993,8 @@ document.write(`
       <li><a href="api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.identifiers_by_resource">identifiers_by_resource() (pypath.core.interaction.Interaction method)</a>
 </li>
       <li><a href="api/pypath.share.common.identity.html#pypath.share.common.identity">identity() (in module pypath.share.common)</a>
+</li>
+      <li><a href="api/pypath.omnipath.server.run.ignore_pandas_copywarn.html#pypath.omnipath.server.run.ignore_pandas_copywarn">ignore_pandas_copywarn() (in module pypath.omnipath.server.run)</a>
 </li>
       <li><a href="api/pypath.legacy.main.PyPath.html#pypath.legacy.main.PyPath.in_complex">in_complex() (pypath.legacy.main.PyPath method)</a>
 </li>
@@ -8272,10 +8302,10 @@ document.write(`
 </li>
       <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.interactions_directed_by_interaction_type_and_data_model_and_resource">interactions_directed_by_interaction_type_and_data_model_and_resource (pypath.core.network.Network attribute)</a>
 </li>
-      <li><a href="api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.interactions_directed_by_interaction_type_and_data_model_and_resource">interactions_directed_by_interaction_type_and_data_model_and_resource() (pypath.core.interaction.Interaction method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.interactions_directed_by_interaction_type_and_data_model_and_resource">interactions_directed_by_interaction_type_and_data_model_and_resource() (pypath.core.interaction.Interaction method)</a>
+</li>
       <li><a href="api/pypath.core.network.Network.html#pypath.core.network.Network.interactions_directed_by_reference">interactions_directed_by_reference (pypath.core.network.Network attribute)</a>
 </li>
       <li><a href="api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.interactions_directed_by_reference">interactions_directed_by_reference() (pypath.core.interaction.Interaction method)</a>
@@ -10152,8 +10182,12 @@ document.write(`
 </li>
       <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.mapping_table_b_to_a">mapping_table_b_to_a (pypath.utils.mapping.MapReader property)</a>
 </li>
-      <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.mapping_tables">mapping_tables() (pypath.utils.mapping.Mapper static method)</a>
+      <li><a href="api/pypath.utils.mapping.mapping_tables.html#pypath.utils.mapping.mapping_tables">mapping_tables() (in module pypath.utils.mapping)</a>
+
+      <ul>
+        <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.mapping_tables">(pypath.utils.mapping.Mapper static method)</a>
 </li>
+      </ul></li>
       <li><a href="api/pypath.internals.input_formats.MappingInput.html#pypath.internals.input_formats.MappingInput">MappingInput (class in pypath.internals.input_formats)</a>
 </li>
       <li><a href="api/pypath.utils.mapping.MappingTable.html#pypath.utils.mapping.MappingTable">MappingTable (class in pypath.utils.mapping)</a>
@@ -10408,6 +10442,8 @@ document.write(`
 </li>
         <li><a href="api/pypath.inputs.clinvar.html#module-pypath.inputs.clinvar">pypath.inputs.clinvar</a>
 </li>
+        <li><a href="api/pypath.inputs.collectri.html#module-pypath.inputs.collectri">pypath.inputs.collectri</a>
+</li>
         <li><a href="api/pypath.inputs.common.html#module-pypath.inputs.common">pypath.inputs.common</a>
 </li>
         <li><a href="api/pypath.inputs.compleat.html#module-pypath.inputs.compleat">pypath.inputs.compleat</a>
@@ -10485,6 +10521,8 @@ document.write(`
         <li><a href="api/pypath.inputs.hgnc.html#module-pypath.inputs.hgnc">pypath.inputs.hgnc</a>
 </li>
         <li><a href="api/pypath.inputs.hippie.html#module-pypath.inputs.hippie">pypath.inputs.hippie</a>
+</li>
+        <li><a href="api/pypath.inputs.hmdb.html#module-pypath.inputs.hmdb">pypath.inputs.hmdb</a>
 </li>
         <li><a href="api/pypath.inputs.homologene.html#module-pypath.inputs.homologene">pypath.inputs.homologene</a>
 </li>
@@ -10583,6 +10621,8 @@ document.write(`
         <li><a href="api/pypath.inputs.mitab.html#module-pypath.inputs.mitab">pypath.inputs.mitab</a>
 </li>
         <li><a href="api/pypath.inputs.mppi.html#module-pypath.inputs.mppi">pypath.inputs.mppi</a>
+</li>
+        <li><a href="api/pypath.inputs.msigdb.html#module-pypath.inputs.msigdb">pypath.inputs.msigdb</a>
 </li>
         <li><a href="api/pypath.inputs.ncrdeathdb.html#module-pypath.inputs.ncrdeathdb">pypath.inputs.ncrdeathdb</a>
 </li>
@@ -10826,6 +10866,12 @@ document.write(`
       <li><a href="api/pypath.share.log.Logger.html#pypath.share.log.Logger.msg">msg() (pypath.share.log.Logger method)</a>
 </li>
       <li><a href="api/pypath.core.annot.Msigdb.html#pypath.core.annot.Msigdb">Msigdb (class in pypath.core.annot)</a>
+</li>
+      <li><a href="api/pypath.inputs.msigdb.msigdb_annotations.html#pypath.inputs.msigdb.msigdb_annotations">msigdb_annotations() (in module pypath.inputs.msigdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.msigdb.msigdb_download.html#pypath.inputs.msigdb.msigdb_download">msigdb_download() (in module pypath.inputs.msigdb)</a>
+</li>
+      <li><a href="api/pypath.inputs.msigdb.msigdb_download_collections.html#pypath.inputs.msigdb.msigdb_download_collections">msigdb_download_collections() (in module pypath.inputs.msigdb)</a>
 </li>
       <li><a href="api/pypath.visual.plot.MultiBarplot.html#pypath.visual.plot.MultiBarplot">MultiBarplot (class in pypath.visual.plot)</a>
 </li>
@@ -12560,13 +12606,20 @@ document.write(`
         <li><a href="api/pypath.inputs.chembl.html#module-pypath.inputs.chembl">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     pypath.inputs.clinvar
 
       <ul>
         <li><a href="api/pypath.inputs.clinvar.html#module-pypath.inputs.clinvar">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    pypath.inputs.collectri
+
+      <ul>
+        <li><a href="api/pypath.inputs.collectri.html#module-pypath.inputs.collectri">module</a>
 </li>
       </ul></li>
       <li>
@@ -12840,6 +12893,13 @@ document.write(`
 
       <ul>
         <li><a href="api/pypath.inputs.hippie.html#module-pypath.inputs.hippie">module</a>
+</li>
+      </ul></li>
+      <li>
+    pypath.inputs.hmdb
+
+      <ul>
+        <li><a href="api/pypath.inputs.hmdb.html#module-pypath.inputs.hmdb">module</a>
 </li>
       </ul></li>
       <li>
@@ -13183,6 +13243,13 @@ document.write(`
 
       <ul>
         <li><a href="api/pypath.inputs.mppi.html#module-pypath.inputs.mppi">module</a>
+</li>
+      </ul></li>
+      <li>
+    pypath.inputs.msigdb
+
+      <ul>
+        <li><a href="api/pypath.inputs.msigdb.html#module-pypath.inputs.msigdb">module</a>
 </li>
       </ul></li>
       <li>
@@ -14084,6 +14151,8 @@ document.write(`
 </li>
       <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_file">read_mapping_file() (pypath.utils.mapping.MapReader method)</a>
 </li>
+      <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_hmdb">read_mapping_hmdb() (pypath.utils.mapping.MapReader method)</a>
+</li>
       <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_ramp">read_mapping_ramp() (pypath.utils.mapping.MapReader method)</a>
 </li>
       <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_unichem">read_mapping_unichem() (pypath.utils.mapping.MapReader method)</a>
@@ -14503,7 +14572,11 @@ document.write(`
 </li>
       </ul></li>
       <li><a href="api/pypath.internals.input_formats.UniprotMapping.html#pypath.internals.input_formats.UniprotMapping.resource_id_type">resource_id_type() (pypath.internals.input_formats.UniprotMapping static method)</a>
+
+      <ul>
+        <li><a href="api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.resource_id_type">(pypath.utils.mapping.MapReader method)</a>
 </li>
+      </ul></li>
       <li><a href="api/pypath.omnipath.server.generate_about_page.resource_list_latex.html#pypath.omnipath.server.generate_about_page.resource_list_latex">resource_list_latex() (in module pypath.omnipath.server.generate_about_page)</a>
 
       <ul>
@@ -14745,6 +14818,8 @@ document.write(`
       <li><a href="api/pypath.legacy.main.PyPath.html#pypath.legacy.main.PyPath.search_attr_or">search_attr_or() (pypath.legacy.main.PyPath method)</a>
 </li>
       <li><a href="api/pypath.legacy.main.PyPath.html#pypath.legacy.main.PyPath.second_neighbours">second_neighbours() (pypath.legacy.main.PyPath method)</a>
+</li>
+      <li><a href="api/pypath.resources.controller.ResourceController.html#pypath.resources.controller.ResourceController.secondary_resources">secondary_resources() (pypath.resources.controller.ResourceController method)</a>
 </li>
       <li><a href="api/pypath.inputs.cellphonedb.CellPhoneDBAnnotation.html#pypath.inputs.cellphonedb.CellPhoneDBAnnotation.secreted">secreted (pypath.inputs.cellphonedb.CellPhoneDBAnnotation attribute)</a>
 </li>
@@ -16926,6 +17001,18 @@ document.write(`
 
       <ul>
         <li><a href="api/pypath.utils.homology.PtmHomology.html#pypath.utils.homology.PtmHomology.translate_site">(pypath.utils.homology.PtmHomology method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/pypath.utils.mapping.translation_df.html#pypath.utils.mapping.translation_df">translation_df() (in module pypath.utils.mapping)</a>
+
+      <ul>
+        <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.translation_df">(pypath.utils.mapping.Mapper method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/pypath.utils.mapping.translation_dict.html#pypath.utils.mapping.translation_dict">translation_dict() (in module pypath.utils.mapping)</a>
+
+      <ul>
+        <li><a href="api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.translation_dict">(pypath.utils.mapping.Mapper method)</a>
 </li>
       </ul></li>
       <li><a href="api/pypath.inputs.cellphonedb.CellPhoneDBAnnotation.html#pypath.inputs.cellphonedb.CellPhoneDBAnnotation.transmembrane">transmembrane (pypath.inputs.cellphonedb.CellPhoneDBAnnotation attribute)</a>

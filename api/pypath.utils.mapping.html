@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pypath.utils.mapping &#8212; pypath 0.14.38 documentation</title>
+    <title>pypath.utils.mapping &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -497,8 +497,6 @@ document.write(`
                   
   <section id="module-pypath.utils.mapping">
 <span id="pypath-utils-mapping"></span><h1>pypath.utils.mapping<a class="headerlink" href="#module-pypath.utils.mapping" title="Permalink to this heading">§</a></h1>
-<p>Performs mapping between IDs of different consensus systems for
-proteins and genes, miRNAs, and chemical compounds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">members<span class="colon">:</span></dt>
 <dd class="field-odd"><p></p></dd>
@@ -526,20 +524,32 @@ proteins and genes, miRNAs, and chemical compounds.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.id_from_label0.html#pypath.utils.mapping.id_from_label0" title="pypath.utils.mapping.id_from_label0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_from_label0</span></code></a>(label[, label_id_type, ...])</p></td>
 <td><p>For a label (e.g.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.init.html#pypath.utils.mapping.init" title="pypath.utils.mapping.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(**kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.id_types.html#pypath.utils.mapping.id_types" title="pypath.utils.mapping.id_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_types</span></code></a>()</p></td>
+<td><p>Identifier types with their labels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.init.html#pypath.utils.mapping.init" title="pypath.utils.mapping.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>(**kwargs)</p></td>
 <td><p>Create a new <cite>Mapper</cite> instance under the <cite>mapper</cite> attribute of this module.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.label.html#pypath.utils.mapping.label" title="pypath.utils.mapping.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>(name[, id_type, entity_type, ncbi_tax_id])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.label.html#pypath.utils.mapping.label" title="pypath.utils.mapping.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>(name[, id_type, entity_type, ncbi_tax_id])</p></td>
 <td><p>For any kind of entity, either protein, miRNA or protein complex, returns the preferred human readable label.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.map_name.html#pypath.utils.mapping.map_name" title="pypath.utils.mapping.map_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_name</span></code></a>(name, id_type, target_id_type[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.map_name.html#pypath.utils.mapping.map_name" title="pypath.utils.mapping.map_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_name</span></code></a>(name, id_type, target_id_type[, ...])</p></td>
 <td><p>Translates one instance of one ID type to a different one.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.map_name0.html#pypath.utils.mapping.map_name0" title="pypath.utils.mapping.map_name0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_name0</span></code></a>(name, id_type, target_id_type[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.map_name0.html#pypath.utils.mapping.map_name0" title="pypath.utils.mapping.map_name0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_name0</span></code></a>(name, id_type, target_id_type[, ...])</p></td>
 <td><p>Translates the name and returns only one of the resulted IDs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.map_names.html#pypath.utils.mapping.map_names" title="pypath.utils.mapping.map_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_names</span></code></a>(names[, id_type, target_id_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.map_names.html#pypath.utils.mapping.map_names" title="pypath.utils.mapping.map_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_names</span></code></a>(names[, id_type, target_id_type, ...])</p></td>
 <td><p>Same as <code class="docutils literal notranslate"><span class="pre">map_name</span></code> but translates multiple IDs at once.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.mapping_tables.html#pypath.utils.mapping.mapping_tables" title="pypath.utils.mapping.mapping_tables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mapping_tables</span></code></a>()</p></td>
+<td><p>A list of built-in mapping tables.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pypath.utils.mapping.translation_df.html#pypath.utils.mapping.translation_df" title="pypath.utils.mapping.translation_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation_df</span></code></a>(id_type, target_id_type[, ...])</p></td>
+<td><p>Identifier translation table as a <cite>pandas.DataFrame</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pypath.utils.mapping.translation_dict.html#pypath.utils.mapping.translation_dict" title="pypath.utils.mapping.translation_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation_dict</span></code></a>(id_type, target_id_type[, ...])</p></td>
+<td><p>Identifier translation table as a dict of sets.</p></td>
 </tr>
 </tbody>
 </table>

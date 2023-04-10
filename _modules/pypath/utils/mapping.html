@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.utils.mapping &#8212; pypath 0.14.38 documentation</title>
+    <title>pypath.utils.mapping &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -513,6 +513,8 @@ document.write(`
 <span class="c1">#  Website: http://pypath.omnipathdb.org/</span>
 <span class="c1">#</span>
 
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Performs mapping between IDs of different consensus systems for</span>
 <span class="sd">proteins and genes, miRNAs, and chemical compounds.</span>
@@ -547,6 +549,7 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Union</span>
 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">timeloop</span>
 
 <span class="c1"># from pypath:</span>
@@ -562,6 +565,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pypath.inputs.biomart</span> <span class="k">as</span> <span class="nn">biomart_input</span>
 <span class="kn">import</span> <span class="nn">pypath.inputs.unichem</span> <span class="k">as</span> <span class="nn">unichem_input</span>
 <span class="kn">import</span> <span class="nn">pypath.inputs.ramp</span> <span class="k">as</span> <span class="nn">ramp_input</span>
+<span class="kn">import</span> <span class="nn">pypath.inputs.hmdb</span> <span class="k">as</span> <span class="nn">hmdb_input</span>
 <span class="kn">import</span> <span class="nn">pypath.internals.input_formats</span> <span class="k">as</span> <span class="nn">input_formats</span>
 <span class="kn">import</span> <span class="nn">pypath.utils.reflists</span> <span class="k">as</span> <span class="nn">reflists</span>
 <span class="kn">import</span> <span class="nn">pypath.utils.taxonomy</span> <span class="k">as</span> <span class="nn">taxonomy</span>
@@ -608,7 +612,7 @@ document.write(`
         <span class="n">input_formats</span><span class="o">.</span><span class="n">ArrayMapping</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="p">(</span>
-        <span class="n">UNICHEM_NAME_TYPES</span><span class="p">,</span>
+        <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">UNICHEM_NAME_TYPES</span><span class="p">},</span>
         <span class="s1">&#39;unichem&#39;</span><span class="p">,</span>
         <span class="n">input_formats</span><span class="o">.</span><span class="n">UnichemMapping</span><span class="p">,</span>
     <span class="p">),</span>
@@ -622,6 +626,17 @@ document.write(`
         <span class="p">),</span>
         <span class="s1">&#39;ramp&#39;</span><span class="p">,</span>
         <span class="n">input_formats</span><span class="o">.</span><span class="n">RampMapping</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="p">(</span>
+        <span class="nb">dict</span><span class="p">(</span>
+            <span class="o">**</span><span class="p">{</span>
+                <span class="n">it</span><span class="p">:</span> <span class="n">it</span>
+                <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">hmdb_input</span><span class="o">.</span><span class="n">ID_FIELDS</span>
+            <span class="p">},</span>
+            <span class="o">**</span><span class="n">input_formats</span><span class="o">.</span><span class="n">HMDB_MAPPING</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="s1">&#39;hmdb&#39;</span><span class="p">,</span>
+        <span class="n">input_formats</span><span class="o">.</span><span class="n">HmdbMapping</span><span class="p">,</span>
     <span class="p">),</span>
 <span class="p">)</span>
 
@@ -668,6 +683,7 @@ document.write(`
             <span class="n">load_b_to_a</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">uniprots</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">lifetime</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+            <span class="n">resource_id_types</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args</span>
@@ -691,6 +707,8 @@ document.write(`
 <span class="sd">            lifetime (int): If this table has not been used for longer than</span>
 <span class="sd">                this preiod it is to be removed at next cleanup. Time in</span>
 <span class="sd">                seconds. Passed to ``MappingTable``.</span>
+<span class="sd">            resource_id_types: Additional mappings between pypath and resource</span>
+<span class="sd">                specific identifier type labels.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">session_mod</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;mapping&#39;</span><span class="p">)</span>
@@ -729,6 +747,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">a_to_b</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">b_to_a</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">uniprots</span> <span class="o">=</span> <span class="n">uniprots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resource_id_types</span> <span class="o">=</span> <span class="n">resource_id_types</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">()</span></div>
 
@@ -1209,6 +1228,7 @@ document.write(`
                         <span class="n">large</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">silent</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                         <span class="n">cache</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="n">slow</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                     <span class="p">)</span>
 
                     <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -1271,7 +1291,13 @@ document.write(`
         <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">[</span>
                 <span class="p">[</span><span class="n">xx</span><span class="p">]</span>
-                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">field</span> <span class="o">==</span> <span class="s1">&#39;protein names&#39;</span> <span class="k">else</span>
+                    <span class="k">if</span> <span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">field</span> <span class="o">==</span> <span class="s1">&#39;protein names&#39;</span> <span class="ow">or</span>
+                        <span class="p">(</span>
+                            <span class="s1">&#39;trembl&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span> <span class="ow">and</span>
+                            <span class="nb">any</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">xx</span><span class="p">)</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span> <span class="k">else</span>
                 <span class="p">[</span>
                     <span class="n">xxx</span> <span class="k">for</span> <span class="n">xxx</span> <span class="ow">in</span> <span class="n">resep</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">recolend</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xx</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
                     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
@@ -1443,14 +1469,16 @@ document.write(`
             <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MapReader.read_mapping_unichem"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_unichem">[docs]</a>    <span class="k">def</span> <span class="nf">read_mapping_unichem</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_read_mapping_smallmolecule</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Loads an ID translation table from UniChem.</span>
+<span class="sd">        Loads a small molecule ID translation table.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">data</span> <span class="o">=</span> <span class="n">unichem_input</span><span class="o">.</span><span class="n">unichem_mapping</span><span class="p">(</span>
-            <span class="n">id_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">id_type_a</span><span class="p">,</span>
-            <span class="n">target_id_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">id_type_b</span><span class="p">,</span>
+        <span class="n">mod</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source_type</span><span class="si">}</span><span class="s1">_input&#39;</span><span class="p">]</span>
+        <span class="n">method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source_type</span><span class="si">}</span><span class="s1">_mapping&#39;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">method</span><span class="p">(</span>
+            <span class="n">id_type_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_id_type_a</span><span class="p">,</span>
+            <span class="n">id_type_b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_id_type_b</span><span class="p">,</span>
         <span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_a_to_b</span><span class="p">:</span>
@@ -1461,7 +1489,7 @@ document.write(`
 
             <span class="bp">self</span><span class="o">.</span><span class="n">b_to_a</span> <span class="o">=</span> <span class="n">common</span><span class="o">.</span><span class="n">swap_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">force_sets</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">NOT_ORGANISM_SPECIFIC</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">NOT_ORGANISM_SPECIFIC</span>
 
 
 <div class="viewcode-block" id="MapReader.read_mapping_ramp"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_ramp">[docs]</a>    <span class="k">def</span> <span class="nf">read_mapping_ramp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1469,20 +1497,23 @@ document.write(`
 <span class="sd">        Loads an ID translation table from RaMP.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="n">data</span> <span class="o">=</span> <span class="n">ramp_input</span><span class="o">.</span><span class="n">ramp_mapping</span><span class="p">(</span>
-            <span class="n">id_type_a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">id_type_a</span><span class="p">,</span>
-            <span class="n">id_type_b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">id_type_b</span><span class="p">,</span>
-        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_read_mapping_smallmolecule</span><span class="p">()</span></div>
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_a_to_b</span><span class="p">:</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">a_to_b</span> <span class="o">=</span> <span class="n">data</span>
+<div class="viewcode-block" id="MapReader.read_mapping_unichem"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_unichem">[docs]</a>    <span class="k">def</span> <span class="nf">read_mapping_unichem</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads an ID translation table from UniChem.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_b_to_a</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_read_mapping_smallmolecule</span><span class="p">()</span></div>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">b_to_a</span> <span class="o">=</span> <span class="n">common</span><span class="o">.</span><span class="n">swap_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">force_sets</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">NOT_ORGANISM_SPECIFIC</span></div>
+<div class="viewcode-block" id="MapReader.read_mapping_hmdb"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.read_mapping_hmdb">[docs]</a>    <span class="k">def</span> <span class="nf">read_mapping_hmdb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads an ID translation table from th Human Metabolome Database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_read_mapping_smallmolecule</span><span class="p">()</span></div>
 
 
     <span class="nd">@staticmethod</span>
@@ -1498,7 +1529,30 @@ document.write(`
         <span class="n">others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;(&#39;</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">others</span><span class="p">]</span>
         <span class="n">names</span> <span class="o">+=</span> <span class="n">others</span>
 
-        <span class="k">return</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">names</span><span class="p">}</span></div>
+        <span class="k">return</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">names</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="MapReader.resource_id_type"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MapReader.html#pypath.utils.mapping.MapReader.resource_id_type">[docs]</a>    <span class="k">def</span> <span class="nf">resource_id_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">side</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Resource specific identifier type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;resource_id_type_</span><span class="si">{</span><span class="n">side</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="ow">or</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_resource_id_types</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;id_type_</span><span class="si">{</span><span class="n">side</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+        <span class="p">)</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resource_id_type_a</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_id_type</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resource_id_type_b</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_id_type</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="MappingTable"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.MappingTable.html#pypath.utils.mapping.MappingTable">[docs]</a><span class="k">class</span> <span class="nc">MappingTable</span><span class="p">(</span><span class="n">session_mod</span><span class="o">.</span><span class="n">Logger</span><span class="p">):</span>
@@ -1616,7 +1670,25 @@ document.write(`
 
         <span class="k">return</span> <span class="s1">&#39;&lt;MappingTable from=</span><span class="si">%s</span><span class="s1">, to=</span><span class="si">%s</span><span class="s1">, taxon=</span><span class="si">%u</span><span class="s1"> (</span><span class="si">%u</span><span class="s1"> IDs)&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">),)</span>
-        <span class="p">)</span></div>
+        <span class="p">)</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">items</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">keys</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">values</span></div>
 
 
 <div class="viewcode-block" id="Mapper"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper">[docs]</a><span class="k">class</span> <span class="nc">Mapper</span><span class="p">(</span><span class="n">session_mod</span><span class="o">.</span><span class="n">Logger</span><span class="p">):</span>
@@ -1916,13 +1988,15 @@ document.write(`
 
             <span class="k">if</span> <span class="n">tbl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
+                <span class="n">basic_services</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hmdb&#39;</span><span class="p">,</span> <span class="s1">&#39;ramp&#39;</span><span class="p">,</span> <span class="s1">&#39;uniprot&#39;</span><span class="p">,</span> <span class="s1">&#39;unichem&#39;</span><span class="p">}</span>
+
                 <span class="k">for</span> <span class="p">(</span><span class="n">service_ids</span><span class="p">,</span> <span class="n">service_id_type</span><span class="p">,</span> <span class="n">input_cls</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span>
                     <span class="n">RESOURCES_IMPLICIT</span>
                 <span class="p">):</span>
 
                     <span class="k">if</span> <span class="p">(</span>
                         <span class="p">(</span>
-                            <span class="n">service_id_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;uniprot&#39;</span><span class="p">,</span> <span class="s1">&#39;unichem&#39;</span><span class="p">}</span> <span class="ow">and</span> <span class="p">(</span>
+                            <span class="n">service_id_type</span> <span class="ow">in</span> <span class="n">basic_services</span> <span class="ow">and</span> <span class="p">(</span>
                                 <span class="n">id_type</span> <span class="ow">in</span> <span class="n">service_ids</span> <span class="ow">and</span>
                                 <span class="n">target_id_type</span> <span class="ow">in</span> <span class="n">service_ids</span> <span class="ow">and</span>
                                 <span class="n">id_type</span> <span class="o">!=</span> <span class="n">target_id_type</span>
@@ -1986,7 +2060,7 @@ document.write(`
                             <span class="p">)</span>
                         <span class="p">)</span>
 
-                        <span class="k">if</span> <span class="n">service_id_type</span> <span class="o">==</span> <span class="s1">&#39;unichem&#39;</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">service_id_type</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;hmdb&#39;</span><span class="p">,</span> <span class="s1">&#39;ramp&#39;</span><span class="p">,</span> <span class="s1">&#39;unichem&#39;</span><span class="p">}:</span>
 
                             <span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">NOT_ORGANISM_SPECIFIC</span>
                             <span class="n">tbl_key</span> <span class="o">=</span> <span class="n">tbl_key_noorganism</span>
@@ -2007,6 +2081,7 @@ document.write(`
                             <span class="n">load_b_to_a</span> <span class="o">=</span> <span class="n">load_b_to_a</span><span class="p">,</span>
                             <span class="n">uniprots</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                             <span class="n">lifetime</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+                            <span class="n">resource_id_types</span> <span class="o">=</span> <span class="n">service_ids</span><span class="p">,</span>
                         <span class="p">)</span>
 
                         <span class="bp">self</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="n">tbl_key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
@@ -2840,6 +2915,48 @@ document.write(`
         <span class="p">)</span>
 
         <span class="k">return</span> <span class="n">tbl</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">if</span> <span class="n">tbl</span> <span class="k">else</span> <span class="nb">set</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Mapper.translation_dict"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.translation_dict">[docs]</a>    <span class="k">def</span> <span class="nf">translation_dict</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">target_id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">ncbi_tax_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MappingTable</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Translation table as a dict.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">which_table</span><span class="p">(</span>
+            <span class="n">id_type</span><span class="p">,</span>
+            <span class="n">target_id_type</span><span class="p">,</span>
+            <span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">ncbi_tax_id</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">ncbi_tax_id</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Mapper.translation_df"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.Mapper.html#pypath.utils.mapping.Mapper.translation_df">[docs]</a>    <span class="k">def</span> <span class="nf">translation_df</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">target_id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+            <span class="n">ncbi_tax_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Translation table as a data frame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">tbl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">translation_dict</span><span class="p">(</span><span class="n">id_type</span><span class="p">,</span> <span class="n">target_id_type</span><span class="p">,</span> <span class="n">ncbi_tax_id</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">tbl</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="p">(</span><span class="n">source_id</span><span class="p">,</span> <span class="n">target_id</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">source_id</span><span class="p">,</span> <span class="n">target_ids</span> <span class="ow">in</span> <span class="n">tbl</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span>
+                    <span class="n">target_id</span> <span class="ow">in</span> <span class="n">target_ids</span>
+                <span class="p">),</span>
+                <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">id_type</span><span class="p">,</span> <span class="n">target_id_type</span><span class="p">],</span>
+            <span class="p">)</span></div>
+
 
     <span class="c1">#</span>
     <span class="c1"># ID specific translation methods</span>
@@ -3996,6 +4113,61 @@ document.write(`
         <span class="n">label_id_type</span> <span class="o">=</span> <span class="n">label_id_type</span><span class="p">,</span>
         <span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">ncbi_tax_id</span><span class="p">,</span>
     <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="translation_dict"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.translation_dict.html#pypath.utils.mapping.translation_dict">[docs]</a><span class="k">def</span> <span class="nf">translation_dict</span><span class="p">(</span>
+        <span class="n">id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">target_id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ncbi_tax_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MappingTable</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identifier translation table as a dict of sets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mapper</span> <span class="o">=</span> <span class="n">get_mapper</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">mapper</span><span class="o">.</span><span class="n">translation_dict</span><span class="p">(</span>
+        <span class="n">id_type</span> <span class="o">=</span> <span class="n">id_type</span><span class="p">,</span>
+        <span class="n">target_id_type</span> <span class="o">=</span> <span class="n">target_id_type</span><span class="p">,</span>
+        <span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">ncbi_tax_id</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="translation_df"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.translation_df.html#pypath.utils.mapping.translation_df">[docs]</a><span class="k">def</span> <span class="nf">translation_df</span><span class="p">(</span>
+        <span class="n">id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">target_id_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ncbi_tax_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MappingTable</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identifier translation table as a `pandas.DataFrame`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mapper</span> <span class="o">=</span> <span class="n">get_mapper</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">mapper</span><span class="o">.</span><span class="n">translation_df</span><span class="p">(</span>
+        <span class="n">id_type</span> <span class="o">=</span> <span class="n">id_type</span><span class="p">,</span>
+        <span class="n">target_id_type</span> <span class="o">=</span> <span class="n">target_id_type</span><span class="p">,</span>
+        <span class="n">ncbi_tax_id</span> <span class="o">=</span> <span class="n">ncbi_tax_id</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="mapping_tables"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.mapping_tables.html#pypath.utils.mapping.mapping_tables">[docs]</a><span class="k">def</span> <span class="nf">mapping_tables</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">MappingTableDefinition</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A list of built-in mapping tables.</span>
+
+<span class="sd">    If `id_type_b` is `None`, that means translation to all other ID types</span>
+<span class="sd">    provided by the same resource is possible.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">get_mapper</span><span class="p">()</span><span class="o">.</span><span class="n">mapping_tables</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="id_types"><a class="viewcode-back" href="../../../api/pypath.utils.mapping.id_types.html#pypath.utils.mapping.id_types">[docs]</a><span class="k">def</span> <span class="nf">id_types</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">IdType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identifier types with their labels.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">get_mapper</span><span class="p">()</span><span class="o">.</span><span class="n">id_types</span><span class="p">()</span></div>
 </pre></div>
 
                 </article>

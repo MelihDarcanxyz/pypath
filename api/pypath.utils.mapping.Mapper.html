@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>pypath.utils.mapping.Mapper &#8212; pypath 0.14.38 documentation</title>
+    <title>pypath.utils.mapping.Mapper &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -628,6 +628,12 @@ gene symbols and then to SwissProt.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate_deleted_uniprots_by_genesymbol</span></code>(...)</p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypath.utils.mapping.Mapper.translation_df" title="pypath.utils.mapping.Mapper.translation_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation_df</span></code></a>(id_type, target_id_type[, ...])</p></td>
+<td><p>Translation table as a data frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypath.utils.mapping.Mapper.translation_dict" title="pypath.utils.mapping.Mapper.translation_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation_dict</span></code></a>(id_type, target_id_type[, ...])</p></td>
+<td><p>Translation table as a dict.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pypath.utils.mapping.Mapper.trembl_swissprot" title="pypath.utils.mapping.Mapper.trembl_swissprot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trembl_swissprot</span></code></a>(uniprots[, ncbi_tax_id])</p></td>
 <td><p>For an iterable of TrEMBL and SwissProt IDs, returns a set with only SwissProt, mapping from TrEMBL to gene symbols, and then back to SwissProt.</p></td>
 </tr>
@@ -990,6 +996,18 @@ is possible).</p>
 <dt class="sig sig-object py" id="pypath.utils.mapping.Mapper.translate_deleted_uniprot_by_genesymbol">
 <span class="sig-name descname"><span class="pre">translate_deleted_uniprot_by_genesymbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uniprot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncbi_tax_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pypath/utils/mapping.html#Mapper.translate_deleted_uniprot_by_genesymbol"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.utils.mapping.Mapper.translate_deleted_uniprot_by_genesymbol" title="Permalink to this definition">§</a></dt>
 <dd><p>Due to potentially ambiguous translation always returns set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pypath.utils.mapping.Mapper.translation_df">
+<span class="sig-name descname"><span class="pre">translation_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_id_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncbi_tax_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pypath/utils/mapping.html#Mapper.translation_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.utils.mapping.Mapper.translation_df" title="Permalink to this definition">§</a></dt>
+<dd><p>Translation table as a data frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pypath.utils.mapping.Mapper.translation_dict">
+<span class="sig-name descname"><span class="pre">translation_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_id_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncbi_tax_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pypath.utils.mapping.MappingTable.html#pypath.utils.mapping.MappingTable" title="pypath.utils.mapping.MappingTable"><span class="pre">MappingTable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pypath/utils/mapping.html#Mapper.translation_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypath.utils.mapping.Mapper.translation_dict" title="Permalink to this definition">§</a></dt>
+<dd><p>Translation table as a dict.</p>
 </dd></dl>
 
 <dl class="py method">
