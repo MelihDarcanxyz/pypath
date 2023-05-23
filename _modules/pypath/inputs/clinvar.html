@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -8,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.inputs.clinvar &#8212; pypath 0.14.47 documentation</title>
+    <title>pypath.inputs.clinvar &#8212; pypath 0.15.1 documentation</title>
   
   
   
@@ -18,12 +17,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -33,8 +32,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -552,11 +551,16 @@ document.write(`
                 <span class="s1">&#39;entrez&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;genesymbol&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;clinical_significance&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;review_status&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;rs&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;phenotype_ids&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;phenotypes&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;otherids&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;origin&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;variation_id&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;assembly&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;chromosome&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;chromosome_accession&#39;</span><span class="p">,</span>
             <span class="p">],</span>
             <span class="n">defaults</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="p">)</span>
@@ -574,8 +578,9 @@ document.write(`
 
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
 
-        <span class="n">phenotype_ids</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;PhenotypeIDS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
-        <span class="n">phenotypes</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;PhenotypeList&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+        <span class="n">phenotype_ids</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;PhenotypeIDS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+        <span class="n">phenotypes</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;PhenotypeList&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
+        <span class="n">otherids</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;OtherIDs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">))</span>
 
         <span class="n">variant</span> <span class="o">=</span> <span class="n">Variant</span><span class="p">(</span>
             <span class="n">allele</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;AlleleID&#39;</span><span class="p">],</span>
@@ -584,11 +589,16 @@ document.write(`
             <span class="n">entrez</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;GeneID&#39;</span><span class="p">],</span>
             <span class="n">genesymbol</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;GeneSymbol&#39;</span><span class="p">],</span>
             <span class="n">clinical_significance</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;ClinicalSignificance&#39;</span><span class="p">],</span>
+            <span class="n">review_status</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;ReviewStatus&#39;</span><span class="p">],</span>
             <span class="n">rs</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;RS# (dbSNP)&#39;</span><span class="p">],</span>
             <span class="n">phenotype_ids</span> <span class="o">=</span> <span class="n">phenotype_ids</span><span class="p">,</span>
             <span class="n">phenotypes</span> <span class="o">=</span> <span class="n">phenotypes</span><span class="p">,</span>
+            <span class="n">otherids</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">otherids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span> <span class="k">else</span> <span class="n">otherids</span><span class="p">,</span>
             <span class="n">origin</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;OriginSimple&#39;</span><span class="p">],</span>
-            <span class="n">variation_id</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;VariationID&#39;</span><span class="p">]</span>
+            <span class="n">variation_id</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;VariationID&#39;</span><span class="p">],</span>
+            <span class="n">assembly</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Assembly&#39;</span><span class="p">],</span>
+            <span class="n">chromosome</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Chromosome&#39;</span><span class="p">],</span>
+            <span class="n">chromosome_accession</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;ChromosomeAccession&#39;</span><span class="p">],</span>
         <span class="p">)</span>
         <span class="n">result</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">variant</span><span class="p">)</span>
 
@@ -646,9 +656,15 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -677,7 +693,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner"></div>
+            
           </footer>
         
       </main>
@@ -685,8 +701,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -704,7 +720,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.0.
     <br/>
   </p>
 </div>
@@ -715,7 +731,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
 </p></div>
       
     </div>
