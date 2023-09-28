@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.omnipath.server.run &#8212; pypath 0.15.1 documentation</title>
+    <title>pypath.omnipath.server.run &#8212; pypath 0.15.8 documentation</title>
   
   
   
@@ -498,22 +498,17 @@ document.write(`
 <span class="c1">#</span>
 <span class="c1">#  This file is part of the `pypath` python module</span>
 <span class="c1">#</span>
-<span class="c1">#  Copyright</span>
-<span class="c1">#  2014-2022</span>
+<span class="c1">#  Copyright 2014-2023</span>
 <span class="c1">#  EMBL, EMBL-EBI, Uniklinik RWTH Aachen, Heidelberg University</span>
 <span class="c1">#</span>
-<span class="c1">#  Authors: Dénes Türei (turei.denes@gmail.com)</span>
-<span class="c1">#           Nicolàs Palacio</span>
-<span class="c1">#           Sebastian Lobentanzer</span>
-<span class="c1">#           Erva Ulusoy</span>
-<span class="c1">#           Olga Ivanova</span>
-<span class="c1">#           Ahmet Rifaioglu</span>
+<span class="c1">#  Authors: see the file `README.rst`</span>
+<span class="c1">#  Contact: Dénes Türei (turei.denes@gmail.com)</span>
 <span class="c1">#</span>
 <span class="c1">#  Distributed under the GPLv3 License.</span>
 <span class="c1">#  See accompanying file LICENSE.txt or copy at</span>
-<span class="c1">#      http://www.gnu.org/licenses/gpl-3.0.html</span>
+<span class="c1">#      https://www.gnu.org/licenses/gpl-3.0.html</span>
 <span class="c1">#</span>
-<span class="c1">#  Website: http://pypath.omnipathdb.org/</span>
+<span class="c1">#  Website: https://pypath.omnipathdb.org/</span>
 <span class="c1">#</span>
 
 <span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">iteritems</span>
@@ -2619,23 +2614,32 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serve_dataframe</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
 
 
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_dorothea_dataset_filter</span><span class="p">(</span><span class="n">tbl</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_dataset_included</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
         <span class="k">return</span> <span class="p">(</span>
-            <span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">tbl</span><span class="o">.</span><span class="n">dorothea</span><span class="p">)</span> <span class="o">|</span>
+            <span class="n">dataset</span> <span class="ow">in</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;datasets&#39;</span><span class="p">]</span> <span class="ow">or</span>
+            <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;datasets&#39;</span><span class="p">]</span> <span class="ow">and</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">dataset2type</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">in</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;types&#39;</span><span class="p">]</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_dorothea_dataset_filter</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tbl</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="p">(</span>
             <span class="p">(</span>
                 <span class="c1"># if the tf_target dataset is requested</span>
                 <span class="c1"># we need to serve it including the parts which</span>
                 <span class="c1"># don&#39;t fit the filters below</span>
-                <span class="p">(</span>
-                    <span class="p">(</span><span class="s1">&#39;tf_target&#39;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;datasets&#39;</span><span class="p">])</span> <span class="o">|</span>
-                    <span class="p">(</span>
-                        <span class="p">(</span><span class="ow">not</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;datasets&#39;</span><span class="p">])</span> <span class="o">&amp;</span>
-                        <span class="p">(</span><span class="s1">&#39;transcriptional&#39;</span> <span class="ow">in</span> <span class="n">args</span><span class="p">[</span><span class="s1">&#39;types&#39;</span><span class="p">])</span>
-                    <span class="p">)</span>
-                <span class="p">)</span> <span class="o">&amp;</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_dataset_included</span><span class="p">(</span><span class="s1">&#39;tf_target&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">&amp;</span>
                 <span class="n">tbl</span><span class="o">.</span><span class="n">tf_target</span>
+            <span class="p">)</span> <span class="o">|</span>
+            <span class="p">(</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_dataset_included</span><span class="p">(</span><span class="s1">&#39;collectri&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">&amp;</span>
+                <span class="n">tbl</span><span class="o">.</span><span class="n">collectri</span>
             <span class="p">)</span>
         <span class="p">)</span>
 
