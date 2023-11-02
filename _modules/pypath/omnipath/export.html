@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 
@@ -7,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.omnipath.export &#8212; pypath 0.15.13 documentation</title>
+    <title>pypath.omnipath.export &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -17,30 +18,29 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=77553476" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css?v=b64fc3cb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
-    <script src="../../../_static/documentation_options.js?v=f4b8e13e"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pypath/omnipath/export';</script>
     <link rel="icon" href="../../../_static/omnipath-logo.svg"/>
@@ -56,15 +56,6 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -105,8 +96,7 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  
-  <div class=" navbar-header-items__start">
+  <div class="navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -130,6 +120,7 @@
 </a></div>
     
   </div>
+  
   
   <div class=" navbar-header-items">
     
@@ -188,25 +179,23 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -222,8 +211,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -234,8 +223,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -246,8 +235,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -258,8 +247,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -270,8 +259,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
       
@@ -281,20 +270,18 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -369,10 +356,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -388,8 +375,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -400,8 +387,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -412,8 +399,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -424,8 +411,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -436,8 +423,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
         
@@ -471,8 +458,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../../contents.html" class="nav-link" aria-label="Home">
@@ -488,7 +475,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../omnipath.html" class="nav-link">pypath.omnipath</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">pypath.omnip...</li>
+    <li class="breadcrumb-item active" aria-current="page">pypath.omnipath.export</li>
   </ul>
 </nav>
 </div>
@@ -511,18 +498,22 @@ document.write(`
 
 <span class="c1">#</span>
 <span class="c1">#  This file is part of the `pypath` python module</span>
+<span class="c1">#  Exports tables for webservice.</span>
 <span class="c1">#</span>
-<span class="c1">#  Copyright 2014-2023</span>
-<span class="c1">#  EMBL, EMBL-EBI, Uniklinik RWTH Aachen, Heidelberg University</span>
+<span class="c1">#  Copyright (c) 2014-2022 - EMBL</span>
 <span class="c1">#</span>
-<span class="c1">#  Authors: see the file `README.rst`</span>
-<span class="c1">#  Contact: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#  Authors: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#           Nicolàs Palacio</span>
+<span class="c1">#           Sebastian Lobentanzer</span>
+<span class="c1">#           Erva Ulusoy</span>
+<span class="c1">#           Olga Ivanova</span>
+<span class="c1">#           Ahmet Rifaioglu</span>
 <span class="c1">#</span>
 <span class="c1">#  Distributed under the GPLv3 License.</span>
 <span class="c1">#  See accompanying file LICENSE.txt or copy at</span>
-<span class="c1">#      https://www.gnu.org/licenses/gpl-3.0.html</span>
+<span class="c1">#      http://www.gnu.org/licenses/gpl-3.0.html</span>
 <span class="c1">#</span>
-<span class="c1">#  Website: https://pypath.omnipathdb.org/</span>
+<span class="c1">#  Website: http://pypath.omnipathdb.org/</span>
 <span class="c1">#</span>
 
 <span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">iteritems</span>
@@ -552,9 +543,7 @@ document.write(`
 <span class="n">simple_types</span> <span class="o">=</span> <span class="p">{</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)}</span>
 
 
-<div class="viewcode-block" id="Export">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export">[docs]</a>
-<span class="k">class</span> <span class="nc">Export</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">Logger</span><span class="p">):</span>
+<div class="viewcode-block" id="Export"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export">[docs]</a><span class="k">class</span> <span class="nc">Export</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">Logger</span><span class="p">):</span>
 
     <span class="n">default_header_uniquepairs</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s1">&#39;UniProt_A&#39;</span><span class="p">,</span>
@@ -618,14 +607,11 @@ document.write(`
         <span class="s1">&#39;references&#39;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
         <span class="s1">&#39;curation_effort&#39;</span><span class="p">:</span> <span class="s1">&#39;int16&#39;</span><span class="p">,</span>
         <span class="s1">&#39;extra_attrs&#39;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;evidences&#39;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
         <span class="s1">&#39;entity_type_source&#39;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
         <span class="s1">&#39;entity_type_target&#39;</span><span class="p">:</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span>
     <span class="p">}</span>
 
-<div class="viewcode-block" id="Export.__init__">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="Export.__init__"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">network</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">only_sources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -662,7 +648,6 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">default_edge_attr_processor</span>
         <span class="p">)</span></div>
 
-
     <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="n">modname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span>
@@ -681,9 +666,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Export.make_df">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.make_df">[docs]</a>
-    <span class="k">def</span> <span class="nf">make_df</span><span class="p">(</span>
+<div class="viewcode-block" id="Export.make_df"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.make_df">[docs]</a>    <span class="k">def</span> <span class="nf">make_df</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">unique_pairs</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
             <span class="n">extra_node_attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -736,7 +719,6 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">_make_df_network</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">_make_df_network</span><span class="p">(</span>
@@ -948,9 +930,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtypes</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Export.get_header">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.get_header">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_header</span><span class="p">(</span>
+<div class="viewcode-block" id="Export.get_header"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.get_header">[docs]</a>    <span class="k">def</span> <span class="nf">get_header</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">unique_pairs</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">):</span>
@@ -978,7 +958,6 @@ document.write(`
         <span class="p">]</span>
 
         <span class="k">return</span> <span class="n">header</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">_process_edge_uniquepairs_igraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -1143,9 +1122,7 @@ document.write(`
         <span class="k">return</span> <span class="n">lines</span>
 
 
-<div class="viewcode-block" id="Export.add_extra_fields">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.add_extra_fields">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_extra_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">dr</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Export.add_extra_fields"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.add_extra_fields">[docs]</a>    <span class="k">def</span> <span class="nf">add_extra_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">dr</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Takes one table row and using the `igraph.Edge` object and the</span>
 <span class="sd">        direction provided adds the extra node and edge attribute fields</span>
@@ -1216,7 +1193,6 @@ document.write(`
         <span class="k">return</span> <span class="n">line</span></div>
 
 
-
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">default_vertex_attr_processor</span><span class="p">(</span><span class="n">vattr</span><span class="p">):</span>
 
@@ -1248,9 +1224,7 @@ document.write(`
             <span class="p">])</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="Export.generic_attr_processor">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.generic_attr_processor">[docs]</a>
-    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Export.generic_attr_processor"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.generic_attr_processor">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">generic_attr_processor</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">dr</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Wraps the attribute processor to handle unknown number of arguments.</span>
@@ -1285,10 +1259,7 @@ document.write(`
                 <span class="k">raise</span> <span class="n">e</span></div>
 
 
-
-<div class="viewcode-block" id="Export.write_tab">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.write_tab">[docs]</a>
-    <span class="k">def</span> <span class="nf">write_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outfile</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Export.write_tab"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.write_tab">[docs]</a>    <span class="k">def</span> <span class="nf">write_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outfile</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Writes the data frame into a tab separated file.</span>
 
@@ -1305,7 +1276,6 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">outfile</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">)</span></div>
 
 
-
     <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outfile</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="n">outfile</span> <span class="o">=</span> <span class="n">outfile</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
@@ -1317,33 +1287,15 @@ document.write(`
 
     <span class="k">def</span> <span class="nf">webservice_interactions_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="n">datasets</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s1">&#39;omnipath&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;kinaseextra&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ligrecextra&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;pathwayextra&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mirnatarget&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dorothea&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;collectri&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;tf_target&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;lncrna_mrna&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;tf_mirna&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;small_molecule&#39;</span><span class="p">,</span>
-        <span class="p">)</span>
-
-        <span class="k">def</span> <span class="nf">get_dataset_callback</span><span class="p">(</span><span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">callable</span><span class="p">:</span>
-
-            <span class="k">def</span> <span class="nf">has_dataset</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-
-                <span class="k">return</span> <span class="n">e</span><span class="o">.</span><span class="n">has_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
-
-            <span class="k">return</span> <span class="n">has_dataset</span>
-
-
-        <span class="n">dataset_args</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="n">dataset</span><span class="p">:</span> <span class="n">get_dataset_callback</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span>
-        <span class="p">}</span>
+        <span class="n">sources_omnipath</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">omnipath</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_extra_directions</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">extra_directions</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_kinase_extra</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">ptm_misc</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_ligrec_extra</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">ligand_receptor</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_pathway_extra</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">pathway_noref</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_mirna</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">mirna_target</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_tf_target</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">netres</span><span class="o">.</span><span class="n">transcription_onebyone</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">sources_dorothea</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">}</span>
+        <span class="n">sources_collectri</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CollecTRI&#39;</span><span class="p">}</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">make_df</span><span class="p">(</span>
             <span class="n">unique_pairs</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1352,37 +1304,129 @@ document.write(`
                 <span class="s1">&#39;entity_type&#39;</span><span class="p">:</span> <span class="s1">&#39;entity_type&#39;</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">extra_edge_attrs</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="o">**</span><span class="n">dataset_args</span><span class="p">,</span>
-                <span class="o">**</span><span class="p">{</span>
-                    <span class="s1">&#39;dorothea_curated&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;curated&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;dorothea_chipseq&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;chipseq&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;dorothea_tfbs&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;tfbs&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;dorothea_coexp&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;coexp&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;dorothea_level&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">dorothea_levels</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="nb">list</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;curation_effort&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
-                        <span class="n">e</span><span class="o">.</span><span class="n">count_curation_effort</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span>
-                            <span class="n">e</span><span class="o">.</span><span class="n">count_curation_effort</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;undirected&#39;</span><span class="p">)</span>
-                                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="k">else</span>
-                            <span class="mi">0</span>
+                <span class="s1">&#39;omnipath&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="nb">bool</span><span class="p">(</span>
+                            <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                            <span class="n">sources_omnipath</span>
+                        <span class="p">)</span> <span class="ow">or</span>
+                        <span class="p">(</span>
+                            <span class="nb">bool</span><span class="p">(</span>
+                                <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;undirected&#39;</span><span class="p">)</span> <span class="o">&amp;</span>
+                                <span class="n">sources_omnipath</span>
+                            <span class="p">)</span> <span class="ow">and</span>
+                            <span class="nb">bool</span><span class="p">(</span>
+                                <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                                <span class="n">sources_extra_directions</span>
+                            <span class="p">)</span>
                         <span class="p">)</span>
-                    <span class="p">),</span>
-                    <span class="s1">&#39;extra_attrs&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">serialize_attrs</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
-                    <span class="s1">&#39;evidences&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">serialize_evidences</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
-                <span class="p">},</span>
-            <span class="p">},</span>
+                    <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                        <span class="s1">&#39;post_translational&#39;</span> <span class="ow">in</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;kinaseextra&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_kinase_extra</span>
+                    <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                        <span class="s1">&#39;post_translational&#39;</span> <span class="ow">in</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;ligrecextra&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_ligrec_extra</span>
+                    <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                        <span class="s1">&#39;post_translational&#39;</span> <span class="ow">in</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;pathwayextra&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_pathway_extra</span>
+                    <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                        <span class="s1">&#39;post_translational&#39;</span> <span class="ow">in</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;mirnatarget&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_mirna</span>
+                    <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+                        <span class="s1">&#39;post_transcriptional&#39;</span> <span class="ow">in</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resource_names</span><span class="p">(</span>
+                            <span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span>
+                            <span class="n">interaction_type</span> <span class="o">=</span> <span class="s1">&#39;transcriptional&#39;</span>
+                        <span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_dorothea</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;collectri&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resource_names</span><span class="p">(</span>
+                            <span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span>
+                            <span class="n">interaction_type</span> <span class="o">=</span> <span class="s1">&#39;transcriptional&#39;</span>
+                        <span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_collectri</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;tf_target&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">bool</span><span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">get_resources</span><span class="p">(</span>
+                            <span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span>
+                            <span class="n">interaction_type</span> <span class="o">=</span> <span class="s1">&#39;transcriptional&#39;</span>
+                        <span class="p">)</span> <span class="o">&amp;</span>
+                        <span class="n">sources_tf_target</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;lncrna_mrna&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="s1">&#39;lncrna_post_transcriptional&#39;</span> <span class="ow">in</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;tf_mirna&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="s1">&#39;mirna_transcriptional&#39;</span> <span class="ow">in</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;small_molecule&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="s1">&#39;small_molecule_protein&#39;</span> <span class="ow">in</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea_curated&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;curated&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea_chipseq&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;chipseq&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea_tfbs&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;tfbs&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea_coexp&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">_get_attr</span><span class="p">(</span><span class="s1">&#39;DoRothEA&#39;</span><span class="p">,</span> <span class="s1">&#39;coexp&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;dorothea_level&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">dorothea_levels</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="nb">list</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get_interaction_types</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;curation_effort&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span>
+                    <span class="n">e</span><span class="o">.</span><span class="n">count_curation_effort</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span>
+                        <span class="n">e</span><span class="o">.</span><span class="n">count_curation_effort</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;undirected&#39;</span><span class="p">)</span>
+                            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="k">else</span>
+                        <span class="mi">0</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+                <span class="s1">&#39;extra_attrs&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">serialize_attrs</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
+            <span class="p">}</span>
         <span class="p">)</span>
 
 
@@ -1472,9 +1516,7 @@ document.write(`
             <span class="p">}</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="Export.sources_table">
-<a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.sources_table">[docs]</a>
-    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Export.sources_table"><a class="viewcode-back" href="../../../api/pypath.omnipath.export.Export.html#pypath.omnipath.export.Export.sources_table">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">sources_table</span><span class="p">(</span>
             <span class="bp">cls</span><span class="p">,</span>
             <span class="n">pa</span><span class="p">,</span>
@@ -1529,7 +1571,6 @@ document.write(`
         <span class="k">return</span> <span class="n">new</span></div>
 
 
-
     <span class="k">def</span> <span class="nf">_dip_urls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
 
         <span class="n">attrs</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">attrs</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;attrs&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">e</span><span class="o">.</span><span class="n">attributes</span>
@@ -1553,16 +1594,13 @@ document.write(`
                     <span class="bp">self</span><span class="o">.</span><span class="n">_log</span><span class="p">(</span><span class="s1">&#39;Could not find DIP ID: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">dip_id</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="s1">&#39;;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
-
 </pre></div>
 
                 </article>
               
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
 </div>
@@ -1594,7 +1632,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            
+            <div class="bd-footer-content__inner"></div>
           </footer>
         
       </main>
@@ -1602,8 +1640,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1621,7 +1659,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
     <br/>
   </p>
 </div>
@@ -1629,11 +1667,10 @@ document.write(`
     </div>
   
   
-  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 
@@ -7,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.core.interaction &#8212; pypath 0.15.13 documentation</title>
+    <title>pypath.core.interaction &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -17,30 +18,29 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=77553476" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css?v=b64fc3cb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
-    <script src="../../../_static/documentation_options.js?v=f4b8e13e"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pypath/core/interaction';</script>
     <link rel="icon" href="../../../_static/omnipath-logo.svg"/>
@@ -56,15 +56,6 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -105,8 +96,7 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  
-  <div class=" navbar-header-items__start">
+  <div class="navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -130,6 +120,7 @@
 </a></div>
     
   </div>
+  
   
   <div class=" navbar-header-items">
     
@@ -188,25 +179,23 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -222,8 +211,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -234,8 +223,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -246,8 +235,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -258,8 +247,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -270,8 +259,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
       
@@ -281,20 +270,18 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -369,10 +356,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -388,8 +375,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -400,8 +387,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -412,8 +399,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -424,8 +411,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -436,8 +423,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
         
@@ -469,8 +456,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../../contents.html" class="nav-link" aria-label="Home">
@@ -483,7 +470,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../../pypath.html" class="nav-link">pypath</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">pypath.core....</li>
+    <li class="breadcrumb-item active" aria-current="page">pypath.core.interaction</li>
   </ul>
 </nav>
 </div>
@@ -507,17 +494,22 @@ document.write(`
 <span class="c1">#</span>
 <span class="c1">#  This file is part of the `pypath` python module</span>
 <span class="c1">#</span>
-<span class="c1">#  Copyright 2014-2023</span>
+<span class="c1">#  Copyright</span>
+<span class="c1">#  2014-2022</span>
 <span class="c1">#  EMBL, EMBL-EBI, Uniklinik RWTH Aachen, Heidelberg University</span>
 <span class="c1">#</span>
-<span class="c1">#  Authors: see the file `README.rst`</span>
-<span class="c1">#  Contact: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#  Authors: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#           Nicolàs Palacio</span>
+<span class="c1">#           Sebastian Lobentanzer</span>
+<span class="c1">#           Erva Ulusoy</span>
+<span class="c1">#           Olga Ivanova</span>
+<span class="c1">#           Ahmet Rifaioglu</span>
 <span class="c1">#</span>
 <span class="c1">#  Distributed under the GPLv3 License.</span>
 <span class="c1">#  See accompanying file LICENSE.txt or copy at</span>
-<span class="c1">#      https://www.gnu.org/licenses/gpl-3.0.html</span>
+<span class="c1">#      http://www.gnu.org/licenses/gpl-3.0.html</span>
 <span class="c1">#</span>
-<span class="c1">#  Website: https://pypath.omnipathdb.org/</span>
+<span class="c1">#  Website: http://pypath.omnipathdb.org/</span>
 <span class="c1">#</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -532,14 +524,12 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">future.utils</span> <span class="kn">import</span> <span class="n">iteritems</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
-
 <span class="kn">import</span> <span class="nn">importlib</span> <span class="k">as</span> <span class="nn">imp</span>
 <span class="kn">import</span> <span class="nn">collections</span>
 <span class="kn">import</span> <span class="nn">operator</span>
 <span class="kn">import</span> <span class="nn">itertools</span>
 <span class="kn">import</span> <span class="nn">functools</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Literal</span>
 
 <span class="kn">import</span> <span class="nn">pypath.core.evidence</span> <span class="k">as</span> <span class="nn">pypath_evidence</span>
 <span class="kn">import</span> <span class="nn">pypath.internals.resource</span> <span class="k">as</span> <span class="nn">pypath_resource</span>
@@ -548,7 +538,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pypath.utils.mapping</span> <span class="k">as</span> <span class="nn">mapping</span>
 <span class="kn">import</span> <span class="nn">pypath.core.entity</span> <span class="k">as</span> <span class="nn">entity</span>
 <span class="kn">import</span> <span class="nn">pypath.core.attrs</span> <span class="k">as</span> <span class="nn">attrs_mod</span>
-<span class="kn">import</span> <span class="nn">pypath.utils.orthology</span> <span class="k">as</span> <span class="nn">orthology</span>
+<span class="kn">import</span> <span class="nn">pypath.utils.homology</span> <span class="k">as</span> <span class="nn">homology</span>
 
 <span class="n">_logger</span> <span class="o">=</span> <span class="n">session_mod</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;interaction&#39;</span><span class="p">)</span>
 <span class="n">_log</span> <span class="o">=</span> <span class="n">_logger</span><span class="o">.</span><span class="n">_log</span>
@@ -581,9 +571,7 @@ document.write(`
 <span class="n">InteractionDataFrameRecord</span><span class="o">.</span><span class="fm">__new__</span><span class="o">.</span><span class="vm">__defaults__</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">8</span>
 
 
-<div class="viewcode-block" id="Interaction">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction">[docs]</a>
-<span class="k">class</span> <span class="nc">Interaction</span><span class="p">(</span><span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction">[docs]</a><span class="k">class</span> <span class="nc">Interaction</span><span class="p">(</span><span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents a unique pair of molecular entities interacting with each</span>
 <span class="sd">    other. One :py:class:`Interaction` object might represent multiple</span>
@@ -621,11 +609,9 @@ document.write(`
         <span class="s1">&#39;direction&#39;</span><span class="p">,</span>
         <span class="s1">&#39;positive&#39;</span><span class="p">,</span>
         <span class="s1">&#39;negative&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;unknown_effect&#39;</span><span class="p">,</span>
     <span class="p">]</span>
 
     <span class="n">_get_methods</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;datasets&#39;</span><span class="p">,</span>
         <span class="s1">&#39;entities&#39;</span><span class="p">,</span>
         <span class="s1">&#39;evidences&#39;</span><span class="p">,</span>
         <span class="s1">&#39;references&#39;</span><span class="p">,</span>
@@ -657,7 +643,6 @@ document.write(`
         <span class="s1">&#39;resource_names_via&#39;</span><span class="p">,</span>
         <span class="s1">&#39;data_models&#39;</span><span class="p">,</span>
         <span class="s1">&#39;interaction_types&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;datasets&#39;</span><span class="p">,</span>
     <span class="p">)</span>
 
     <span class="n">_by_methods</span> <span class="o">=</span> <span class="p">(</span>
@@ -732,9 +717,7 @@ document.write(`
     <span class="p">}</span>
 
 
-<div class="viewcode-block" id="Interaction.__init__">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.__init__"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">a</span><span class="p">,</span>
             <span class="n">b</span><span class="p">,</span>
@@ -783,18 +766,11 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">a_b</span><span class="p">:</span> <span class="n">pypath_evidence</span><span class="o">.</span><span class="n">Evidences</span><span class="p">(),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">b_a</span><span class="p">:</span> <span class="n">pypath_evidence</span><span class="o">.</span><span class="n">Evidences</span><span class="p">(),</span>
         <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">unknown_effect</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">a_b</span><span class="p">:</span> <span class="n">pypath_evidence</span><span class="o">.</span><span class="n">Evidences</span><span class="p">(),</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">b_a</span><span class="p">:</span> <span class="n">pypath_evidence</span><span class="o">.</span><span class="n">Evidences</span><span class="p">(),</span>
-        <span class="p">}</span>
 
         <span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.reload">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.reload">[docs]</a>
-    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.reload"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.reload">[docs]</a>    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reloads the object from the module level.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -819,7 +795,6 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">positive</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">unknown_effect</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span>
         <span class="p">):</span>
 
             <span class="n">evs</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">=</span> <span class="n">evsnew</span>
@@ -834,7 +809,6 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">_generate_get_methods</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_generate_count_methods</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_generate_by_methods</span><span class="p">()</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">_get_entity</span><span class="p">(</span>
@@ -904,9 +878,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.direction_key">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.direction_key">[docs]</a>
-    <span class="k">def</span> <span class="nf">direction_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.direction_key"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.direction_key">[docs]</a>    <span class="k">def</span> <span class="nf">direction_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The direction keys are tuples of `Entity` objects; this method</span>
 <span class="sd">        creates these tuples from a tuple of strings. The two strings</span>
@@ -926,7 +898,6 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">direction_key_identifiers</span><span class="p">(</span><span class="n">direction</span><span class="p">):</span>
 
@@ -943,13 +914,11 @@ document.write(`
         <span class="k">return</span> <span class="n">direction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">direction</span> <span class="o">!=</span> <span class="s1">&#39;undirected&#39;</span>
 
 
-<div class="viewcode-block" id="Interaction.add_evidence">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.add_evidence">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_evidence</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.add_evidence"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.add_evidence">[docs]</a>    <span class="k">def</span> <span class="nf">add_evidence</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">evidence</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;undirected&#39;</span><span class="p">,</span>
-            <span class="n">effect</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">effect</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
@@ -1016,12 +985,7 @@ document.write(`
 
             <span class="k">elif</span> <span class="n">effect</span> <span class="ow">in</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;inhibition&#39;</span><span class="p">}:</span>
 
-                <span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span> <span class="o">+=</span> <span class="n">evidence</span>
-
-            <span class="k">elif</span> <span class="n">effect</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;unknown&#39;</span><span class="p">}:</span>
-
-                <span class="bp">self</span><span class="o">.</span><span class="n">unknown_effect</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span> <span class="o">+=</span> <span class="n">evidence</span></div>
-
+                <span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span> <span class="o">+=</span> <span class="n">evidence</span></div>
 
 
     <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1094,22 +1058,10 @@ document.write(`
 
             <span class="n">one</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="n">eff_key</span><span class="p">]</span> <span class="o">+=</span> <span class="n">other</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="n">eff_key</span><span class="p">]</span>
 
-        <span class="k">for</span> <span class="n">eff_key</span> <span class="ow">in</span> <span class="n">one</span><span class="o">.</span><span class="n">unknown_effect</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-
-            <span class="n">one</span><span class="o">.</span><span class="n">unknown_effect</span><span class="p">[</span><span class="n">eff_key</span><span class="p">]</span> <span class="o">+=</span> <span class="n">other</span><span class="o">.</span><span class="n">unknown_effect</span><span class="p">[</span><span class="n">eff_key</span><span class="p">]</span>
-
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="k">return</span> <span class="s1">&#39;&lt;Interaction: </span><span class="si">%s</span><span class="s1"> [</span><span class="si">%s</span><span class="s1">]&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">(),</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="p">),</span>
-        <span class="p">)</span>
-
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Interaction: </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1"> [</span><span class="si">%s</span><span class="s1">]&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">label</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
             <span class="s1">&#39;&lt;&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">b_a</span><span class="p">]</span> <span class="k">else</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span>
             <span class="p">(</span>
@@ -1132,7 +1084,9 @@ document.write(`
             <span class="p">),</span>
             <span class="s1">&#39;&gt;&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">a_b</span><span class="p">]</span> <span class="k">else</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">label</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="p">),</span>
         <span class="p">)</span>
+
 
     <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 
@@ -1158,23 +1112,7 @@ document.write(`
         <span class="p">}</span>
 
 
-    <span class="k">def</span> <span class="nf">has_dataset</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span>
-            <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-            <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">effect</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-        <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-
-        <span class="k">return</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">get_evidences</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span><span class="p">,</span> <span class="n">effect</span> <span class="o">=</span> <span class="n">effect</span><span class="p">)</span><span class="o">.</span>
-            <span class="n">has_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="p">)</span>
-
-
-<div class="viewcode-block" id="Interaction.get_direction">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_direction">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_direction</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_direction"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_direction">[docs]</a>    <span class="k">def</span> <span class="nf">get_direction</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1216,10 +1154,7 @@ document.write(`
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_directions">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_directions">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_directions</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_directions"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_directions">[docs]</a>    <span class="k">def</span> <span class="nf">get_directions</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">src</span><span class="p">,</span>
             <span class="n">tgt</span><span class="p">,</span>
@@ -1276,7 +1211,6 @@ document.write(`
             <span class="k">return</span> <span class="kc">None</span></div>
 
 
-
     <span class="k">def</span> <span class="nf">_select_answer_type</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">answer</span><span class="p">,</span>
@@ -1297,9 +1231,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.which_directions">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.which_directions">[docs]</a>
-    <span class="k">def</span> <span class="nf">which_directions</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.which_directions"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.which_directions">[docs]</a>    <span class="k">def</span> <span class="nf">which_directions</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">effect</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1341,14 +1273,11 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="c1"># synonym: old name</span>
     <span class="n">which_dirs</span> <span class="o">=</span> <span class="n">which_directions</span>
 
 
-<div class="viewcode-block" id="Interaction.which_signs">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.which_signs">[docs]</a>
-    <span class="k">def</span> <span class="nf">which_signs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">effect</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.which_signs"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.which_signs">[docs]</a>    <span class="k">def</span> <span class="nf">which_signs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">effect</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the pair(s) of nodes for which there is information</span>
 <span class="sd">        about their effect signs.</span>
@@ -1382,7 +1311,6 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_effect_synonyms</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span>
 
@@ -1398,19 +1326,13 @@ document.write(`
 
             <span class="k">return</span> <span class="s1">&#39;negative&#39;</span>
 
-        <span class="k">if</span> <span class="n">effect</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;unknown&#39;</span><span class="p">}:</span>
-
-            <span class="k">return</span> <span class="s1">&#39;unknown&#39;</span>
-
 
     <span class="k">def</span> <span class="nf">_resources_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="k">return</span> <span class="n">common</span><span class="o">.</span><span class="n">to_set</span><span class="p">(</span><span class="n">resources</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.unset_direction">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_direction">[docs]</a>
-    <span class="k">def</span> <span class="nf">unset_direction</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.unset_direction"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_direction">[docs]</a>    <span class="k">def</span> <span class="nf">unset_direction</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">,</span>
             <span class="n">only_sign</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1441,7 +1363,7 @@ document.write(`
             <span class="n">attrs</span> <span class="o">=</span> <span class="p">(</span>
                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_effect_synonyms</span><span class="p">(</span><span class="n">only_sign</span><span class="p">),)</span>
                     <span class="k">if</span> <span class="n">only_sign</span> <span class="k">else</span>
-                <span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;unknown_effect&#39;</span><span class="p">)</span>
+                <span class="p">(</span><span class="s1">&#39;direction&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">)</span>
             <span class="p">)</span>
             <span class="n">resource</span> <span class="o">=</span> <span class="n">resource</span> <span class="ow">or</span> <span class="n">source</span>
 
@@ -1461,14 +1383,11 @@ document.write(`
                     <span class="p">)</span></div>
 
 
-
     <span class="c1"># synonym: old name</span>
     <span class="n">unset_dir</span> <span class="o">=</span> <span class="n">unset_direction</span>
 
 
-<div class="viewcode-block" id="Interaction.unset_sign">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_sign">[docs]</a>
-    <span class="k">def</span> <span class="nf">unset_sign</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.unset_sign"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_sign">[docs]</a>    <span class="k">def</span> <span class="nf">unset_sign</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">,</span>
             <span class="n">sign</span><span class="p">,</span>
@@ -1507,10 +1426,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.unset_interaction_type">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_interaction_type">[docs]</a>
-    <span class="k">def</span> <span class="nf">unset_interaction_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction_type</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.unset_interaction_type"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.unset_interaction_type">[docs]</a>    <span class="k">def</span> <span class="nf">unset_interaction_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction_type</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Removes all evidences with a certain ``interaction_type``.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1532,10 +1448,7 @@ document.write(`
                         <span class="n">evs</span> <span class="o">-=</span> <span class="n">ev</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.is_directed">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_directed">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_directed"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_directed">[docs]</a>    <span class="k">def</span> <span class="nf">is_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if edge has any directionality information.</span>
 
@@ -1552,10 +1465,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.is_directed_by_resources">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_directed_by_resources">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_directed_by_resources</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_directed_by_resources"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_directed_by_resources">[docs]</a>    <span class="k">def</span> <span class="nf">is_directed_by_resources</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if edge has any directionality information from some</span>
 <span class="sd">        resource(s).</span>
@@ -1567,7 +1477,6 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dir_by_resource</span><span class="p">(</span><span class="n">resources</span><span class="p">,</span> <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">or_</span><span class="p">)</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">is_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
@@ -1582,9 +1491,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.is_mutual_by_resources">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_mutual_by_resources">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_mutual_by_resources</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_mutual_by_resources"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_mutual_by_resources">[docs]</a>    <span class="k">def</span> <span class="nf">is_mutual_by_resources</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the edge has mutual directions (both A--&gt;B and B--&gt;A)</span>
 <span class="sd">        according to some resource(s).</span>
@@ -1593,10 +1500,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dir_by_resource</span><span class="p">(</span><span class="n">resources</span><span class="p">,</span> <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">and_</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.is_loop">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_loop">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_loop"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_loop">[docs]</a>    <span class="k">def</span> <span class="nf">is_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :returns:</span>
 <span class="sd">        ``True`` if the interaction is a loop edge i.e. its endpoints are the</span>
@@ -1604,7 +1508,6 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">_dir_by_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">op</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">or_</span><span class="p">):</span>
@@ -1617,9 +1520,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.is_stimulation">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_stimulation">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_stimulation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_stimulation"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_stimulation">[docs]</a>    <span class="k">def</span> <span class="nf">is_stimulation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if any (or for a specific *direction*) interaction is</span>
 <span class="sd">        activation (positive interaction).</span>
@@ -1641,10 +1542,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.is_inhibition">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_inhibition">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_inhibition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_inhibition"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_inhibition">[docs]</a>    <span class="k">def</span> <span class="nf">is_inhibition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if any (or for a specific *direction*) interaction is</span>
 <span class="sd">        inhibition (negative interaction).</span>
@@ -1666,7 +1564,6 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="k">def</span> <span class="nf">_is_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="n">_sign</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign</span><span class="p">)</span>
@@ -1685,9 +1582,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.has_sign">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.has_sign">[docs]</a>
-    <span class="k">def</span> <span class="nf">has_sign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.has_sign"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.has_sign">[docs]</a>    <span class="k">def</span> <span class="nf">has_sign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks whether the edge (or for a specific *direction*) has</span>
 <span class="sd">        any signed information (about positive/negative interactions).</span>
@@ -1708,10 +1603,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.add_sign">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.add_sign">[docs]</a>
-    <span class="k">def</span> <span class="nf">add_sign</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.add_sign"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.add_sign">[docs]</a>    <span class="k">def</span> <span class="nf">add_sign</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
             <span class="n">sign</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -1780,10 +1672,7 @@ document.write(`
             <span class="n">ev_attr</span> <span class="o">+=</span> <span class="n">evidence</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_sign">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_sign">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_sign</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_sign"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_sign">[docs]</a>    <span class="k">def</span> <span class="nf">get_sign</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span>
             <span class="n">sign</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1854,10 +1743,7 @@ document.write(`
             <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.source">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.source">[docs]</a>
-    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.source"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.source">[docs]</a>    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">undirected</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1886,14 +1772,11 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="c1"># synonym: old name</span>
     <span class="n">src</span> <span class="o">=</span> <span class="n">source</span>
 
 
-<div class="viewcode-block" id="Interaction.target">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.target">[docs]</a>
-    <span class="k">def</span> <span class="nf">target</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.target"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.target">[docs]</a>    <span class="k">def</span> <span class="nf">target</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">undirected</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1920,7 +1803,6 @@ document.write(`
             <span class="n">resources</span> <span class="o">=</span> <span class="n">resources</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
-
 
 
     <span class="c1"># synonym: old name</span>
@@ -1969,9 +1851,7 @@ document.write(`
         <span class="p">))</span>
 
 
-<div class="viewcode-block" id="Interaction.src_by_resource">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.src_by_resource">[docs]</a>
-    <span class="k">def</span> <span class="nf">src_by_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.src_by_resource"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.src_by_resource">[docs]</a>    <span class="k">def</span> <span class="nf">src_by_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the name(s) of the source node(s) for each existing</span>
 <span class="sd">        direction on the interaction for a specific *resource*.</span>
@@ -1998,10 +1878,7 @@ document.write(`
         <span class="p">]</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.tgt_by_resource">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.tgt_by_resource">[docs]</a>
-    <span class="k">def</span> <span class="nf">tgt_by_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.tgt_by_resource"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.tgt_by_resource">[docs]</a>    <span class="k">def</span> <span class="nf">tgt_by_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the name(s) of the target node(s) for each existing</span>
 <span class="sd">        direction on the interaction for a specific *resource*.</span>
@@ -2028,10 +1905,7 @@ document.write(`
         <span class="p">]</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.resources_a_b">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_a_b">[docs]</a>
-    <span class="k">def</span> <span class="nf">resources_a_b</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.resources_a_b"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_a_b">[docs]</a>    <span class="k">def</span> <span class="nf">resources_a_b</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">evidences</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2060,14 +1934,11 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="c1"># synonym for old method name</span>
     <span class="n">sources_straight</span> <span class="o">=</span> <span class="n">resources_a_b</span>
 
 
-<div class="viewcode-block" id="Interaction.resources_b_a">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_b_a">[docs]</a>
-    <span class="k">def</span> <span class="nf">resources_b_a</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.resources_b_a"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_b_a">[docs]</a>    <span class="k">def</span> <span class="nf">resources_b_a</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">evidences</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2095,14 +1966,11 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="c1"># synonym for old method name</span>
     <span class="n">sources_reverse</span> <span class="o">=</span> <span class="n">resources_b_a</span>
 
 
-<div class="viewcode-block" id="Interaction.resources_undirected">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_undirected">[docs]</a>
-    <span class="k">def</span> <span class="nf">resources_undirected</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.resources_undirected"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.resources_undirected">[docs]</a>    <span class="k">def</span> <span class="nf">resources_undirected</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">resources</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">evidences</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2131,13 +1999,10 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
     <span class="n">sources_undirected</span> <span class="o">=</span> <span class="n">resources_undirected</span>
 
 
-<div class="viewcode-block" id="Interaction.positive_a_b">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_a_b">[docs]</a>
-    <span class="k">def</span> <span class="nf">positive_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.positive_a_b"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_a_b">[docs]</a>    <span class="k">def</span> <span class="nf">positive_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the :py:attr:`a_b` directionality is a positive</span>
 <span class="sd">        interaction.</span>
@@ -2151,13 +2016,10 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">positive</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">a_b</span><span class="p">])</span></div>
 
 
-
     <span class="n">positive_straight</span> <span class="o">=</span> <span class="n">positive_a_b</span>
 
 
-<div class="viewcode-block" id="Interaction.positive_b_a">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_b_a">[docs]</a>
-    <span class="k">def</span> <span class="nf">positive_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.positive_b_a"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_b_a">[docs]</a>    <span class="k">def</span> <span class="nf">positive_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the :py:attr:`b_a` directionality is a positive</span>
 <span class="sd">        interaction.</span>
@@ -2171,13 +2033,10 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">positive</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">b_a</span><span class="p">])</span></div>
 
 
-
     <span class="n">positive_reverse</span> <span class="o">=</span> <span class="n">positive_b_a</span>
 
 
-<div class="viewcode-block" id="Interaction.negative_a_b">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_a_b">[docs]</a>
-    <span class="k">def</span> <span class="nf">negative_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.negative_a_b"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_a_b">[docs]</a>    <span class="k">def</span> <span class="nf">negative_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the :py:attr:`a_b` directionality is a negative</span>
 <span class="sd">        interaction.</span>
@@ -2191,13 +2050,10 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">a_b</span><span class="p">])</span></div>
 
 
-
     <span class="n">negative_straight</span> <span class="o">=</span> <span class="n">negative_a_b</span>
 
 
-<div class="viewcode-block" id="Interaction.negative_b_a">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_b_a">[docs]</a>
-    <span class="k">def</span> <span class="nf">negative_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.negative_b_a"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_b_a">[docs]</a>    <span class="k">def</span> <span class="nf">negative_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Checks if the :py:attr:`b_a` directionality is a negative</span>
 <span class="sd">        interaction.</span>
@@ -2211,13 +2067,10 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">b_a</span><span class="p">])</span></div>
 
 
-
     <span class="n">negative_reverse</span> <span class="o">=</span> <span class="n">negative_b_a</span>
 
 
-<div class="viewcode-block" id="Interaction.negative_resources_a_b">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_resources_a_b">[docs]</a>
-    <span class="k">def</span> <span class="nf">negative_resources_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.negative_resources_a_b"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_resources_a_b">[docs]</a>    <span class="k">def</span> <span class="nf">negative_resources_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves the list of resources for the :py:attr:`a_b`</span>
 <span class="sd">        direction and negative sign.</span>
@@ -2239,10 +2092,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.negative_resources_b_a">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_resources_b_a">[docs]</a>
-    <span class="k">def</span> <span class="nf">negative_resources_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.negative_resources_b_a"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.negative_resources_b_a">[docs]</a>    <span class="k">def</span> <span class="nf">negative_resources_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves the list of resources for the :py:attr:`b_a`</span>
 <span class="sd">        direction and negative sign.</span>
@@ -2264,10 +2114,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.positive_resources_a_b">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_resources_a_b">[docs]</a>
-    <span class="k">def</span> <span class="nf">positive_resources_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.positive_resources_a_b"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_resources_a_b">[docs]</a>    <span class="k">def</span> <span class="nf">positive_resources_a_b</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves the list of resources for the :py:attr:`a_b`</span>
 <span class="sd">        direction and positive sign.</span>
@@ -2289,10 +2136,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.positive_resources_b_a">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_resources_b_a">[docs]</a>
-    <span class="k">def</span> <span class="nf">positive_resources_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.positive_resources_b_a"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.positive_resources_b_a">[docs]</a>    <span class="k">def</span> <span class="nf">positive_resources_b_a</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves the list of resources for the :py:attr:`b_a`</span>
 <span class="sd">        direction and positive sign.</span>
@@ -2314,10 +2158,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.majority_dir">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.majority_dir">[docs]</a>
-    <span class="k">def</span> <span class="nf">majority_dir</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.majority_dir"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.majority_dir">[docs]</a>    <span class="k">def</span> <span class="nf">majority_dir</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">only_interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">only_primary</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2372,10 +2213,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.majority_sign">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.majority_sign">[docs]</a>
-    <span class="k">def</span> <span class="nf">majority_sign</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.majority_sign"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.majority_sign">[docs]</a>    <span class="k">def</span> <span class="nf">majority_sign</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">only_interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">only_primary</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2426,10 +2264,7 @@ document.write(`
         <span class="k">return</span> <span class="n">result</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.consensus">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.consensus">[docs]</a>
-    <span class="k">def</span> <span class="nf">consensus</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.consensus"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.consensus">[docs]</a>    <span class="k">def</span> <span class="nf">consensus</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">only_interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">only_primary</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2538,13 +2373,10 @@ document.write(`
         <span class="k">return</span> <span class="n">result</span></div>
 
 
-
     <span class="n">consensus_edges</span> <span class="o">=</span> <span class="n">consensus</span>
 
 
-<div class="viewcode-block" id="Interaction.merge">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.merge">[docs]</a>
-    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.merge"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Merges current Interaction with another (if and only if they are the</span>
 <span class="sd">        same class and contain the same nodes). Updates the attributes</span>
@@ -2577,10 +2409,7 @@ document.write(`
             <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)[</span><span class="n">_dir</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">attr</span><span class="p">)[</span><span class="n">_dir</span><span class="p">]</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.translate">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.translate">[docs]</a>
-    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">new_attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.translate"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.translate">[docs]</a>    <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">new_attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Translates the node names/identifiers according to the</span>
 <span class="sd">        dictionary *ids*. Also is able to change attributes like `id_type`,</span>
@@ -2681,8 +2510,7 @@ document.write(`
         <span class="k">return</span> <span class="n">new</span></div>
 
 
-
-    <span class="k">def</span> <span class="nf">orthology_translate_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_a</span><span class="p">,</span> <span class="n">id_b</span><span class="p">,</span> <span class="n">taxon</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">homology_translate_one</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_a</span><span class="p">,</span> <span class="n">id_b</span><span class="p">,</span> <span class="n">taxon</span><span class="p">):</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
             <span class="n">ids</span> <span class="o">=</span> <span class="p">{</span>
@@ -2708,7 +2536,7 @@ document.write(`
         <span class="p">)</span>
 
 
-    <span class="k">def</span> <span class="nf">orthology_translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">taxon</span><span class="p">,</span> <span class="n">exclude</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">homology_translate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">taxon</span><span class="p">,</span> <span class="n">exclude</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="n">exclude</span> <span class="o">=</span> <span class="n">exclude</span> <span class="ow">or</span> <span class="nb">set</span><span class="p">()</span>
         <span class="n">exclude</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -2716,21 +2544,21 @@ document.write(`
         <span class="k">for</span> <span class="n">new_a</span><span class="p">,</span> <span class="n">new_b</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span>
             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">identifier</span><span class="p">,)</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">taxon</span> <span class="ow">in</span> <span class="n">exclude</span> <span class="k">else</span>
-            <span class="n">orthology</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
+            <span class="n">homology</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
                 <span class="n">source_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
                 <span class="n">target</span> <span class="o">=</span> <span class="n">taxon</span><span class="p">,</span>
                 <span class="n">source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">taxon</span><span class="p">,</span>
             <span class="p">),</span>
             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">identifier</span><span class="p">,)</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">taxon</span> <span class="ow">in</span> <span class="n">exclude</span> <span class="k">else</span>
-            <span class="n">orthology</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
+            <span class="n">homology</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span>
                 <span class="n">source_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
                 <span class="n">target</span> <span class="o">=</span> <span class="n">taxon</span><span class="p">,</span>
                 <span class="n">source</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">taxon</span><span class="p">,</span>
             <span class="p">),</span>
         <span class="p">):</span>
 
-            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">orthology_translate_one</span><span class="p">(</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">homology_translate_one</span><span class="p">(</span>
                 <span class="n">id_a</span> <span class="o">=</span> <span class="n">new_a</span><span class="p">,</span>
                 <span class="n">id_b</span> <span class="o">=</span> <span class="n">new_b</span><span class="p">,</span>
                 <span class="n">taxon</span> <span class="o">=</span> <span class="n">taxon</span><span class="p">,</span>
@@ -2746,7 +2574,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 
         <span class="n">effect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_effect_synonyms</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span>
@@ -2802,15 +2629,12 @@ document.write(`
                     <span class="n">via</span> <span class="o">=</span> <span class="n">via</span><span class="p">,</span>
                     <span class="n">data_model</span> <span class="o">=</span> <span class="n">data_model</span><span class="p">,</span>
                     <span class="n">references</span> <span class="o">=</span> <span class="n">references</span><span class="p">,</span>
-                    <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="p">)</span>
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.get_entities">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_entities">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_entities</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_entities"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_entities">[docs]</a>    <span class="k">def</span> <span class="nf">get_entities</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">entity_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2820,7 +2644,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">return_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -2886,7 +2709,6 @@ document.write(`
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">entity_type</span> <span class="ow">or</span> <span class="n">en</span><span class="o">.</span><span class="n">entity_type</span> <span class="ow">in</span> <span class="n">entity_type</span>
             <span class="p">)</span>
         <span class="p">)</span></div>
-
 
 
     <span class="nd">@classmethod</span>
@@ -2956,9 +2778,7 @@ document.write(`
             <span class="bp">cls</span><span class="o">.</span><span class="n">_count_methods</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">_method_name</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.get_interactions">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_interactions"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">effect</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2970,7 +2790,6 @@ document.write(`
             <span class="n">entity_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">source_entity_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">target_entity_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns one or two tuples of the interacting partners: one if only</span>
@@ -3052,17 +2871,13 @@ document.write(`
                     <span class="n">interaction_type</span> <span class="o">=</span> <span class="n">interaction_type</span><span class="p">,</span>
                     <span class="n">via</span> <span class="o">=</span> <span class="n">via</span><span class="p">,</span>
                     <span class="n">references</span> <span class="o">=</span> <span class="n">references</span><span class="p">,</span>
-                    <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="p">)</span>
 
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.evaluate_evidences">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.evaluate_evidences">[docs]</a>
-    <span class="k">def</span> <span class="nf">evaluate_evidences</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.evaluate_evidences"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.evaluate_evidences">[docs]</a>    <span class="k">def</span> <span class="nf">evaluate_evidences</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">this_direction</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3072,7 +2887,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Selects the evidence collections matching the direction and effect</span>
@@ -3086,10 +2900,7 @@ document.write(`
         <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iter_match_evidences</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.iter_match_evidences">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.iter_match_evidences">[docs]</a>
-    <span class="k">def</span> <span class="nf">iter_match_evidences</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.iter_match_evidences"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.iter_match_evidences">[docs]</a>    <span class="k">def</span> <span class="nf">iter_match_evidences</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">this_direction</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3099,7 +2910,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Selects the evidence collections matching the direction and effect</span>
@@ -3118,16 +2928,12 @@ document.write(`
                 <span class="n">interaction_type</span> <span class="o">=</span> <span class="n">interaction_type</span><span class="p">,</span>
                 <span class="n">via</span> <span class="o">=</span> <span class="n">via</span><span class="p">,</span>
                 <span class="n">references</span> <span class="o">=</span> <span class="n">references</span><span class="p">,</span>
-                <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">,</span>
             <span class="p">):</span>
 
                 <span class="k">yield</span> <span class="n">evs</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.iter_evidences">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.iter_evidences">[docs]</a>
-    <span class="k">def</span> <span class="nf">iter_evidences</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.iter_evidences"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.iter_evidences">[docs]</a>    <span class="k">def</span> <span class="nf">iter_evidences</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">this_direction</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3186,10 +2992,7 @@ document.write(`
                     <span class="k">yield</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">this_effect</span><span class="p">)[</span><span class="n">evs_key</span><span class="p">]</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_0">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_0">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_0"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_0">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns unique interacting pairs without being aware of the direction.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -3202,10 +3005,7 @@ document.write(`
         <span class="k">return</span> <span class="n">result</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">result</span> <span class="k">else</span> <span class="p">()</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_directed">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_directed">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_directed"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_directed">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args</span>
 <span class="sd">            kwargs:</span>
@@ -3219,10 +3019,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_interactions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_undirected">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_undirected">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_undirected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_undirected"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_undirected">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_undirected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only the undirected interactions will be considered, if any resource</span>
 <span class="sd">        annotates this interaction as undirected both directions will be</span>
@@ -3240,10 +3037,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_interactions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_undirected_0">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_undirected_0">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_undirected_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_undirected_0"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_undirected_0">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_undirected_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only the undirected interactions will be considered, if any resource</span>
 <span class="sd">        annotates this interaction as undirected the interacting pair as</span>
@@ -3259,10 +3053,7 @@ document.write(`
         <span class="k">return</span> <span class="n">undir</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">undir</span> <span class="k">else</span> <span class="p">()</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_non_directed">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_non_directed">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_non_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_non_directed"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_non_directed">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_non_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only the undirected interactions will be considered, if any resource</span>
 <span class="sd">        annotates this interaction as undirected both directions will be</span>
@@ -3284,10 +3075,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_non_directed_0">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_non_directed_0">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_non_directed_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_non_directed_0"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_non_directed_0">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_non_directed_0</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Only the undirected interactions will be considered, if any resource</span>
 <span class="sd">        annotates this interaction as undirected and none as directed, the</span>
@@ -3304,10 +3092,7 @@ document.write(`
         <span class="k">return</span> <span class="n">nondir</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">nondir</span> <span class="k">else</span> <span class="p">()</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_signed">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_signed">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_signed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_signed"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_signed">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_signed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args</span>
 <span class="sd">            kwargs:</span>
@@ -3321,10 +3106,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_interactions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_positive">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_positive">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_positive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_positive"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_positive">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_positive</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args</span>
 <span class="sd">            kwargs:</span>
@@ -3336,10 +3118,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_interactions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_negative">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_negative">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_negative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_negative"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_negative">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_negative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Args</span>
 <span class="sd">            kwargs:</span>
@@ -3351,10 +3130,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_interactions</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_interactions_mutual">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_mutual">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_interactions_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.get_interactions_mutual"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_interactions_mutual">[docs]</a>    <span class="k">def</span> <span class="nf">get_interactions_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Note: undirected interactions does not count as mutual but only</span>
 <span class="sd">        interactions with explicit direction information for both directions.</span>
@@ -3373,10 +3149,7 @@ document.write(`
         <span class="k">return</span> <span class="n">interactions</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">interactions</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="p">()</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.is_mutual">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_mutual">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.is_mutual"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.is_mutual">[docs]</a>    <span class="k">def</span> <span class="nf">is_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Note: undirected interactions does not count as mutual but only</span>
 <span class="sd">        interactions with explicit direction information for both directions.</span>
@@ -3389,10 +3162,7 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_interactions_mutual</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.count_interactions_mutual">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_mutual">[docs]</a>
-    <span class="k">def</span> <span class="nf">count_interactions_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.count_interactions_mutual"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_mutual">[docs]</a>    <span class="k">def</span> <span class="nf">count_interactions_mutual</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Note: undirected interactions does not count as mutual but only</span>
 <span class="sd">        interactions with explicit direction information for both directions.</span>
@@ -3405,10 +3175,7 @@ document.write(`
         <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_mutual</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.count_interactions_undirected">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_undirected">[docs]</a>
-    <span class="k">def</span> <span class="nf">count_interactions_undirected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.count_interactions_undirected"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_undirected">[docs]</a>    <span class="k">def</span> <span class="nf">count_interactions_undirected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns `True` if any resource annotates this interaction without</span>
 <span class="sd">        direction.</span>
@@ -3421,10 +3188,7 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_interactions_undirected</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.count_interactions_non_directed">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_non_directed">[docs]</a>
-    <span class="k">def</span> <span class="nf">count_interactions_non_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.count_interactions_non_directed"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.count_interactions_non_directed">[docs]</a>    <span class="k">def</span> <span class="nf">count_interactions_non_directed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns `True` if any resource annotates this interaction without</span>
 <span class="sd">        and no resource with direction.</span>
@@ -3437,10 +3201,7 @@ document.write(`
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_interactions_non_directed</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.get_degrees">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_degrees">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_degrees</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_degrees"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_degrees">[docs]</a>    <span class="k">def</span> <span class="nf">get_degrees</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3505,7 +3266,6 @@ document.write(`
             <span class="p">)</span>
 
         <span class="k">return</span> <span class="n">result</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">get_curation_effort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -3771,9 +3531,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Interaction.generate_df_records">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.generate_df_records">[docs]</a>
-    <span class="k">def</span> <span class="nf">generate_df_records</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.generate_df_records"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.generate_df_records">[docs]</a>    <span class="k">def</span> <span class="nf">generate_df_records</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">by_source</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">with_references</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -3945,49 +3703,11 @@ document.write(`
                         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.asdict">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.asdict">[docs]</a>
-    <span class="k">def</span> <span class="nf">asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Dictionary representation of the evidences.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="n">direction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_b</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_b</span> <span class="o">==</span> <span class="n">direction</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_a</span>
-
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s1">&#39;id_a&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">direction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">identifier</span><span class="p">),</span>
-            <span class="s1">&#39;id_b&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">direction</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">identifier</span><span class="p">),</span>
-            <span class="s1">&#39;positive&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">positive</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">asdict</span><span class="p">(),</span>
-            <span class="s1">&#39;negative&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">negative</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">asdict</span><span class="p">(),</span>
-            <span class="s1">&#39;directed&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">unknown_effect</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">asdict</span><span class="p">(),</span>
-            <span class="s1">&#39;undirected&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">[</span><span class="s1">&#39;undirected&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">asdict</span><span class="p">(),</span>
-        <span class="p">}</span></div>
-
-
-
-<div class="viewcode-block" id="Interaction.serialize_attrs">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.serialize_attrs">[docs]</a>
-    <span class="k">def</span> <span class="nf">serialize_attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Serialize the resource specific attributes into a JSON string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">serialize_attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="n">evs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">direction</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span>
 
-        <span class="k">return</span> <span class="n">evs</span><span class="o">.</span><span class="n">serialize_attrs</span><span class="p">()</span></div>
-
-
-
-<div class="viewcode-block" id="Interaction.serialize_evidences">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.serialize_evidences">[docs]</a>
-    <span class="k">def</span> <span class="nf">serialize_evidences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Serialize the evidences into a JSON string.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">asdict</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span><span class="p">))</span></div>
-
+        <span class="k">return</span> <span class="n">evs</span><span class="o">.</span><span class="n">serialize_attrs</span><span class="p">()</span>
 
 
     <span class="k">def</span> <span class="nf">_get_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
@@ -3997,9 +3717,7 @@ document.write(`
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span><span class="p">[</span><span class="n">direction</span><span class="p">][</span><span class="n">resource</span><span class="p">][</span><span class="n">key</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="Interaction.get_attr">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_attr">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_attr</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.get_attr"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.get_attr">[docs]</a>    <span class="k">def</span> <span class="nf">get_attr</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">resource</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -4039,10 +3757,7 @@ document.write(`
             <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.dorothea_levels">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.dorothea_levels">[docs]</a>
-    <span class="k">def</span> <span class="nf">dorothea_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">tuple</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Interaction.dorothea_levels"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.dorothea_levels">[docs]</a>    <span class="k">def</span> <span class="nf">dorothea_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">tuple</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retrieves the DoRothEA confidence levels.</span>
 
@@ -4070,10 +3785,7 @@ document.write(`
         <span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Interaction.dorothea_level">
-<a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.dorothea_level">[docs]</a>
-    <span class="k">def</span> <span class="nf">dorothea_level</span><span class="p">(</span>
+<div class="viewcode-block" id="Interaction.dorothea_level"><a class="viewcode-back" href="../../../api/pypath.core.interaction.Interaction.html#pypath.core.interaction.Interaction.dorothea_level">[docs]</a>    <span class="k">def</span> <span class="nf">dorothea_level</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">,</span>
         <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]:</span>
@@ -4088,9 +3800,7 @@ document.write(`
 
         <span class="n">levels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dorothea_levels</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">common</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="n">levels</span><span class="p">)</span></div>
-</div>
-
+        <span class="k">return</span> <span class="n">common</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="n">levels</span><span class="p">)</span></div></div>
 
 
 <span class="n">Interaction</span><span class="o">.</span><span class="n">_generate_entity_methods</span><span class="p">()</span>
@@ -4104,9 +3814,7 @@ document.write(`
               
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
 </div>
@@ -4138,7 +3846,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            
+            <div class="bd-footer-content__inner"></div>
           </footer>
         
       </main>
@@ -4146,8 +3854,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -4165,7 +3873,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
     <br/>
   </p>
 </div>
@@ -4173,11 +3881,10 @@ document.write(`
     </div>
   
   
-  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

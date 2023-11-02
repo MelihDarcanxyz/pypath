@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 
@@ -7,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pypath.core.evidence &#8212; pypath 0.15.13 documentation</title>
+    <title>pypath.core.evidence &#8212; pypath 0.14.47 documentation</title>
   
   
   
@@ -17,30 +18,29 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=77553476" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css?v=b64fc3cb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/pypathdocs.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
-    <script src="../../../_static/documentation_options.js?v=f4b8e13e"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pypath/core/evidence';</script>
     <link rel="icon" href="../../../_static/omnipath-logo.svg"/>
@@ -56,15 +56,6 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -105,8 +96,7 @@
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  
-  <div class=" navbar-header-items__start">
+  <div class="navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -130,6 +120,7 @@
 </a></div>
     
   </div>
+  
   
   <div class=" navbar-header-items">
     
@@ -188,25 +179,23 @@
       
         <div class="navbar-item navbar-persistent--container">
           
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
         </div>
       
       
         <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -222,8 +211,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -234,8 +223,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -246,8 +235,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -258,8 +247,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -270,8 +259,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
       
@@ -281,20 +270,18 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+  </button>
+`);
+</script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
       <span class="fa-solid fa-outdent"></span>
     </label>
   
@@ -369,10 +356,10 @@ document.write(`
           <div class="navbar-item">
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script></div>
@@ -388,8 +375,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/saezlab/pypath" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
           
@@ -400,8 +387,8 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
+          <a href="https://twitter.com/omnipathdb" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
         <li class="nav-item">
           
@@ -412,8 +399,8 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://pypi.org/project/pypath-omnipath" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
         </li>
         <li class="nav-item">
           
@@ -424,8 +411,8 @@ document.write(`
           
           
           
-          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">OmniPath</span></a>
+          <a href="https://omnipathdb.org/" title="OmniPath" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-university"></i></span>
+            <label class="sr-only">OmniPath</label></a>
         </li>
         <li class="nav-item">
           
@@ -436,8 +423,8 @@ document.write(`
           
           
           
-          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Saez Lab</span></a>
+          <a href="https://saezlab.org/" title="Saez Lab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-users"></i></span>
+            <label class="sr-only">Saez Lab</label></a>
         </li>
 </ul></div>
         
@@ -469,8 +456,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../../contents.html" class="nav-link" aria-label="Home">
@@ -506,18 +493,24 @@ document.write(`
 
 <span class="c1">#</span>
 <span class="c1">#  This file is part of the `pypath` python module</span>
+<span class="c1">#  (Planned for) centrally handling cache for all databases/resources.</span>
 <span class="c1">#</span>
-<span class="c1">#  Copyright 2014-2023</span>
+<span class="c1">#  Copyright</span>
+<span class="c1">#  2014-2022</span>
 <span class="c1">#  EMBL, EMBL-EBI, Uniklinik RWTH Aachen, Heidelberg University</span>
 <span class="c1">#</span>
-<span class="c1">#  Authors: see the file `README.rst`</span>
-<span class="c1">#  Contact: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#  Authors: Dénes Türei (turei.denes@gmail.com)</span>
+<span class="c1">#           Nicolàs Palacio</span>
+<span class="c1">#           Sebastian Lobentanzer</span>
+<span class="c1">#           Erva Ulusoy</span>
+<span class="c1">#           Olga Ivanova</span>
+<span class="c1">#           Ahmet Rifaioglu</span>
 <span class="c1">#</span>
 <span class="c1">#  Distributed under the GPLv3 License.</span>
 <span class="c1">#  See accompanying file LICENSE.txt or copy at</span>
-<span class="c1">#      https://www.gnu.org/licenses/gpl-3.0.html</span>
+<span class="c1">#      http://www.gnu.org/licenses/gpl-3.0.html</span>
 <span class="c1">#</span>
-<span class="c1">#  Website: https://pypath.omnipathdb.org/</span>
+<span class="c1">#  Website: http://pypath.omnipathdb.org/</span>
 <span class="c1">#</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -540,15 +533,12 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pypath.share.session</span> <span class="k">as</span> <span class="nn">session_mod</span>
 <span class="kn">import</span> <span class="nn">pypath.core.entity</span> <span class="k">as</span> <span class="nn">entity</span>
 <span class="kn">import</span> <span class="nn">pypath.core.attrs</span> <span class="k">as</span> <span class="nn">attrs_mod</span>
-<span class="kn">import</span> <span class="nn">pypath.resources.network</span> <span class="k">as</span> <span class="nn">netres</span>
 
 <span class="n">_logger</span> <span class="o">=</span> <span class="n">session_mod</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;evidence&#39;</span><span class="p">)</span>
 <span class="n">_log</span> <span class="o">=</span> <span class="n">_logger</span><span class="o">.</span><span class="n">_log</span>
 
 
-<div class="viewcode-block" id="Evidence">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence">[docs]</a>
-<span class="k">class</span> <span class="nc">Evidence</span><span class="p">(</span><span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidence"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence">[docs]</a><span class="k">class</span> <span class="nc">Evidence</span><span class="p">(</span><span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents an evidence supporting a relationship such as molecular</span>
 <span class="sd">    interaction, molecular complex, enzyme-PTM interaction, annotation, etc.</span>
@@ -566,24 +556,17 @@ document.write(`
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s1">&#39;resource&#39;</span><span class="p">,</span>
         <span class="s1">&#39;references&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;dataset&#39;</span><span class="p">,</span>
     <span class="p">]</span>
 
 
-<div class="viewcode-block" id="Evidence.__init__">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">,</span> <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidence.__init__"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource</span><span class="p">,</span> <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">attrs</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">resource</span> <span class="o">=</span> <span class="n">resource</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">resource</span><span class="p">,</span> <span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
         <span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Evidence.reload">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.reload">[docs]</a>
-    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidence.reload"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.reload">[docs]</a>    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reloads the object from the module level.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -593,7 +576,6 @@ document.write(`
         <span class="n">imp</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span>
         <span class="n">new</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
         <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span></div>
-
 
 
     <span class="nd">@staticmethod</span>
@@ -624,11 +606,7 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">resource</span> <span class="o">==</span> <span class="n">other</span> <span class="ow">or</span>
             <span class="p">(</span>
                 <span class="nb">hasattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="s1">&#39;resource&#39;</span><span class="p">)</span> <span class="ow">and</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">resource</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">resource</span> <span class="ow">and</span>
-                <span class="p">(</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">interaction_type</span> <span class="o">==</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">interaction_type</span>
-                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">resource</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">resource</span>
             <span class="p">)</span>
         <span class="p">)</span>
 
@@ -641,7 +619,6 @@ document.write(`
 
         <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span><span class="p">:</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">netres</span><span class="o">.</span><span class="n">choose_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">references</span><span class="p">)</span>
             <span class="n">attrs_mod</span><span class="o">.</span><span class="n">AttributeHandler</span><span class="o">.</span><span class="fm">__iadd__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 
@@ -657,13 +634,10 @@ document.write(`
 
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 
-        <span class="n">dataset</span> <span class="o">=</span> <span class="n">netres</span><span class="o">.</span><span class="n">choose_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
-
         <span class="n">new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
             <span class="n">resource</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">|</span> <span class="n">other</span><span class="o">.</span><span class="n">references</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">new</span><span class="o">.</span><span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span>
         <span class="n">new</span><span class="o">.</span><span class="n">update_attrs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
         <span class="n">new</span><span class="o">.</span><span class="n">update_attrs</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">attrs</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
 
@@ -676,9 +650,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">key</span>
 
 
-<div class="viewcode-block" id="Evidence.merge">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.merge">[docs]</a>
-    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidence.merge"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Merges two evidences. Returns set of either one or two evidences</span>
 <span class="sd">        depending on whether the two evidences are from the same resource.</span>
@@ -694,7 +666,6 @@ document.write(`
             <span class="k">return</span> <span class="p">{</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">}</span></div>
 
 
-
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="k">return</span> <span class="s1">&#39;&lt;Evidence </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s%u</span><span class="s1"> references)&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span>
@@ -702,11 +673,6 @@ document.write(`
             <span class="s1">&#39;via </span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">via</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">via</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
             <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">references</span><span class="p">),</span>
         <span class="p">)</span>
-
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">name</span>
 
 
     <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -751,9 +717,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Evidence.has_interaction_type">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.has_interaction_type">[docs]</a>
-    <span class="k">def</span> <span class="nf">has_interaction_type</span><span class="p">(</span>
+<div class="viewcode-block" id="Evidence.has_interaction_type"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.has_interaction_type">[docs]</a>    <span class="k">def</span> <span class="nf">has_interaction_type</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">interaction_type</span><span class="p">,</span>
             <span class="n">database</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -775,7 +739,6 @@ document.write(`
                 <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">via</span> <span class="o">==</span> <span class="n">via</span>
             <span class="p">)</span>
         <span class="p">)</span></div>
-
 
 
     <span class="nd">@staticmethod</span>
@@ -830,7 +793,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 
         <span class="k">def</span> <span class="nf">_match</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
@@ -899,49 +861,11 @@ document.write(`
             <span class="p">(</span>
                 <span class="ow">not</span> <span class="n">data_model</span> <span class="ow">or</span>
                 <span class="n">_match</span><span class="p">(</span><span class="s1">&#39;data_model&#39;</span><span class="p">,</span> <span class="n">data_model</span><span class="p">)</span>
-            <span class="p">)</span> <span class="ow">and</span>
-            <span class="p">(</span>
-                <span class="n">datasets</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span>
-                <span class="n">_match</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">datasets</span><span class="p">)</span>
             <span class="p">)</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">name</span>
-
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pubmeds</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        PubMed IDs of the references supporting this evidence.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">pmid</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">references</span><span class="p">]</span>
-
-
-<div class="viewcode-block" id="Evidence.asdict">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidence.html#pypath.core.evidence.Evidence.asdict">[docs]</a>
-    <span class="k">def</span> <span class="nf">asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Dictionary representation of the evidence.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="s1">&#39;resource&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-            <span class="s1">&#39;references&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pubmeds</span><span class="p">,</span>
-            <span class="s1">&#39;dataset&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span>
-            <span class="s1">&#39;via&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">via</span><span class="p">,</span>
-            <span class="s1">&#39;attrs&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">,</span>
-        <span class="p">}</span></div>
-</div>
-
-
-
-<div class="viewcode-block" id="Evidences">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences">[docs]</a>
-<span class="k">class</span> <span class="nc">Evidences</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidences"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences">[docs]</a><span class="k">class</span> <span class="nc">Evidences</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A collection of evidences. All evidences supporting a relationship such</span>
 <span class="sd">    as molecular interaction, molecular complex, enzyme-PTM interaction,</span>
@@ -959,18 +883,13 @@ document.write(`
     <span class="p">]</span>
 
 
-<div class="viewcode-block" id="Evidences.__init__">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.__init__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evidences</span> <span class="o">=</span> <span class="p">()):</span>
+<div class="viewcode-block" id="Evidences.__init__"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evidences</span> <span class="o">=</span> <span class="p">()):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="fm">__iadd__</span><span class="p">(</span><span class="n">evidences</span><span class="p">)</span></div>
 
 
-
-<div class="viewcode-block" id="Evidences.reload">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.reload">[docs]</a>
-    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidences.reload"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.reload">[docs]</a>    <span class="k">def</span> <span class="nf">reload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Reloads the object from the module level.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -986,7 +905,6 @@ document.write(`
         <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
 
             <span class="n">ev</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">=</span> <span class="n">new_ev_class</span></div>
-
 
 
     <span class="k">def</span> <span class="fm">__iadd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -1241,9 +1159,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Evidences.has_interaction_type">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.has_interaction_type">[docs]</a>
-    <span class="k">def</span> <span class="nf">has_interaction_type</span><span class="p">(</span>
+<div class="viewcode-block" id="Evidences.has_interaction_type"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.has_interaction_type">[docs]</a>    <span class="k">def</span> <span class="nf">has_interaction_type</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">interaction_type</span><span class="p">,</span>
             <span class="n">database</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1258,7 +1174,6 @@ document.write(`
             <span class="n">ev</span><span class="o">.</span><span class="n">has_interaction_type</span><span class="p">(</span><span class="n">interaction_type</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">via</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span>
         <span class="p">)</span></div>
-
 
 
     <span class="k">def</span> <span class="nf">has_data_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_model</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1287,32 +1202,6 @@ document.write(`
     <span class="k">def</span> <span class="nf">get_data_models</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
         <span class="k">return</span> <span class="p">{</span><span class="n">ev</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">data_model</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)}</span>
-
-
-    <span class="k">def</span> <span class="nf">get_datasets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="n">ds</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span>
-            <span class="p">(</span><span class="n">ev</span><span class="o">.</span><span class="n">dataset</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">ds</span>
-        <span class="p">}</span>
-
-
-<div class="viewcode-block" id="Evidences.has_dataset">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.has_dataset">[docs]</a>
-    <span class="k">def</span> <span class="nf">has_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Contains evidence(s) from a given dataset meeting the criteria.</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            dataset:</span>
-<span class="sd">                Name of the dataset.</span>
-<span class="sd">            kwargs:</span>
-<span class="sd">                Filtering criteria for evidences.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_datasets</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
-
 
 
     <span class="k">def</span> <span class="fm">__isub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -1352,7 +1241,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 
         <span class="k">return</span> <span class="p">(</span>
@@ -1363,7 +1251,6 @@ document.write(`
                 <span class="n">interaction_type</span> <span class="o">=</span> <span class="n">interaction_type</span><span class="p">,</span>
                 <span class="n">via</span> <span class="o">=</span> <span class="n">via</span><span class="p">,</span>
                 <span class="n">references</span> <span class="o">=</span> <span class="n">references</span><span class="p">,</span>
-                <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="p">)</span>
 
@@ -1375,7 +1262,6 @@ document.write(`
             <span class="n">interaction_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">via</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">references</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">datasets</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">):</span>
 
         <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span>
@@ -1386,7 +1272,6 @@ document.write(`
                     <span class="n">interaction_type</span> <span class="o">=</span> <span class="n">interaction_type</span><span class="p">,</span>
                     <span class="n">via</span> <span class="o">=</span> <span class="n">via</span><span class="p">,</span>
                     <span class="n">references</span> <span class="o">=</span> <span class="n">references</span><span class="p">,</span>
-                    <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="p">)</span>
         <span class="p">)</span>
@@ -1401,9 +1286,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">simple_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="Evidences.keys">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.keys">[docs]</a>
-    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidences.keys"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns</span>
 <span class="sd">            (dict_keys): The keys of this dictionary are</span>
@@ -1414,10 +1297,7 @@ document.write(`
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div>
 
 
-
-<div class="viewcode-block" id="Evidences.items">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.items">[docs]</a>
-    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Evidences.items"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.items">[docs]</a>    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns</span>
 <span class="sd">            (dict_items): The evidences as a mapping, with</span>
@@ -1427,7 +1307,6 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">evidences</span><span class="o">.</span><span class="n">items</span><span class="p">()</span></div>
-
 
 
     <span class="nd">@property</span>
@@ -1443,9 +1322,7 @@ document.write(`
         <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Evidences.serialize_attrs">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.serialize_attrs">[docs]</a>
-    <span class="k">def</span> <span class="nf">serialize_attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">top_key_prefix</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="viewcode-block" id="Evidences.serialize_attrs"><a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.serialize_attrs">[docs]</a>    <span class="k">def</span> <span class="nf">serialize_attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">top_key_prefix</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Serialize the extra attributes of the evidences as a JSON string.</span>
 
@@ -1457,47 +1334,14 @@ document.write(`
             <span class="bp">self</span><span class="o">.</span><span class="n">simple_dict</span><span class="p">,</span>
             <span class="n">top_key_prefix</span> <span class="o">=</span> <span class="n">top_key_prefix</span><span class="p">,</span>
             <span class="n">default</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">obj</span><span class="p">:</span> <span class="n">obj</span><span class="o">.</span><span class="n">serialize</span><span class="p">(),</span>
-        <span class="p">)</span></div>
-
-
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">datasets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Datasets in this evidence set.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="p">{</span><span class="n">ev</span><span class="o">.</span><span class="n">dataset</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">}</span>
-
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attrs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Combines the custom attributes from all evidences within this set.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="n">common</span><span class="o">.</span><span class="n">combine_attrs</span><span class="p">([</span><span class="n">ev</span><span class="o">.</span><span class="n">attrs</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">])</span>
-
-
-<div class="viewcode-block" id="Evidences.asdict">
-<a class="viewcode-back" href="../../../api/pypath.core.evidence.Evidences.html#pypath.core.evidence.Evidences.asdict">[docs]</a>
-    <span class="k">def</span> <span class="nf">asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Evidence set as a list of dictionaries.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="p">[</span><span class="n">ev</span><span class="o">.</span><span class="n">asdict</span><span class="p">()</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span></div>
-</div>
-
+        <span class="p">)</span></div></div>
 </pre></div>
 
                 </article>
               
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
 </div>
@@ -1529,7 +1373,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            
+            <div class="bd-footer-content__inner"></div>
           </footer>
         
       </main>
@@ -1537,8 +1381,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1556,7 +1400,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 6.1.3.
     <br/>
   </p>
 </div>
@@ -1564,11 +1408,10 @@ document.write(`
     </div>
   
   
-  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>
